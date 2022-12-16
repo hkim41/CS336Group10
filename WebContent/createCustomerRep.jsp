@@ -9,7 +9,7 @@
 <body>
 	<button onclick="window.location.href='adminlanding.jsp';">Return to Admin landing</button>
 <h3> Create a New Customer Representative Account</h3>
-	<form action="checkCreateCustomerRepAccount.jsp" method="POST">
+	<form action="checkCreateCustomerRep.jsp" method="POST">
 		Enter name: <input type="text" name="name" /> <br /> Enter username:
 		<input type="text" name="username" /> <br /> Enter password: <input
 			type="password" name="password" /> <br /> Enter address: <input
