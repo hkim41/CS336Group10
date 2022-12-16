@@ -29,6 +29,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
+  `account_type` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 -- Dump completed on 2022-11-15 15:30:05
 
 INSERT INTO users
-VALUES ('hk345', '336BuyMe'), ('adminuser123', '1234');
+VALUES ('hk345', '336BuyMe', 'user'), ('adminuser123', '1234', 'admin');
