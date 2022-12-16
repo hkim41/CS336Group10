@@ -18,3 +18,7 @@ admin
 user: adminuser123 password: 1234
 
 put your database password in ApplicationDB.java
+
+Contributions:
+
+Assumptions:
