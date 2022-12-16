@@ -24,10 +24,10 @@
     	    if (rs1.next()) {
     	    	ResultSet rs2;
     	    	rs2 = stmt.executeQuery("select * FROM users WHERE username='" + userid + 
-    	    			"' and password='"+ pwd + "' and account_type= 'admin'");
+    	    			"' and password='"+ pwd + "' and account_type= 'reps'");
     	    	if (rs2.next()) {
     	    		session.setAttribute("user", userid);
-        	        response.sendRedirect("adminlanding.jsp");
+        	        response.sendRedirect("customerRepresentativeLanding.jsp");
         	        out.println("welcome " + userid);
         	        out.println("<a href='logout.jsp'>Log out</a>");
         	        out.println("<a href='account.jsp'>Account Page</a>");
