@@ -9,6 +9,6 @@
 <body>
 	<h4>Manage Customer Rep Accounts</h4>
 	<li> <a href="createCustomerRep.jsp">Create new representatives</a> </li>
-	<li> <a>Delete existing representatives</a> </li>
+	<li> <a href="deleteCustomerRep.jsp">Delete existing representatives</a> </li>
 </body>
 </html>
