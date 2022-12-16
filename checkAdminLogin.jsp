@@ -32,7 +32,7 @@
         	        out.println("<a href='logout.jsp'>Log out</a>");
         	        out.println("<a href='account.jsp'>Account Page</a>");
     	    	} else {
-    	    		out.println("Invalid account type <a href='login.jsp'>Please try again</a>");
+    	    		out.println("Invalid account type <a href='adminlogin.jsp'>Please try again</a>");
     	    	}
     	    } else {
     	        out.println("Invalid password <a href='adminlogin.jsp'>Please try again</a>");
