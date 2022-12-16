@@ -8,6 +8,8 @@
 </head>
 <body>
 	<h1>Welcome user. What action would you like to do today</h1>
+	
+	<a href="logout.jsp">Logout</a>
 
 </body>
 </html>
