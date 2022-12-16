@@ -9,7 +9,7 @@
 <body>
 <h2> Customer Representative Account Login</h2>
 <br>
-	<form method="post" action="show.jsp">
+	<form method="post" action="checkCustomerRepLogin.jsp">
 		 username: <input type="text" name="uname">
 		 <br>
 		 password: <input type="text" name="upass">
