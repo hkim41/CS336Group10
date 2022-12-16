@@ -8,3 +8,13 @@ Project URL:
 Demo Video:
 
 Credentials:
+end users
+user: hk345 password: 336BuyMe
+
+customer rep
+user: hk345 password: 336BuyMe
+
+admin
+user: adminuser123 password: 1234
+
+put your database password in ApplicationDB.java
