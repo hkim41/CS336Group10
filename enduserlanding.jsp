@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +9,10 @@
 <body>
 <h1>User Dashboard</h1>
 <ul>
-<li> <a>Manage saless</a> </li>
+<li> <a>Manage sales</a> </li>
 <li> <a>Manage purchases</a> </li>
 <li> <a>View current auctions</a> </li>
-<li> <a>Account settings</a></li>
+<li> <a href="account.jsp">Account settings</a></li>
 </ul>
 </body>
 </html>
