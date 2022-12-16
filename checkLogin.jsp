@@ -17,7 +17,7 @@
 	Statement stmt = con.createStatement();	
 	
 	ResultSet rs;
-    rs = stmt.executeQuery("select * from users where username='" + userid + "'");
+    rs = stmt.executeQuery("SELECT * FROM users WHERE username='" + userid + "'");
     if (rs.next()){
     	 ResultSet rs1;
     	    rs1 = stmt.executeQuery("select * from users where username='" + userid + "' and password='" + pwd + "'");
@@ -29,7 +29,7 @@
     	        out.println("<a href='logout.jsp'>Log out</a>");
     	        out.println("<a href='account.jsp'>Account Page</a>");
     	    } else {
-    	        out.println("Invalid password <a href='login.jsp'>try again</a>");
+    	        out.println("Invalid password <a href='login.jsp'>Please try again</a>");
     	    }
     }
     else{
