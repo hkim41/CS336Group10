@@ -22,12 +22,18 @@
     	 ResultSet rs1;
     	    rs1 = stmt.executeQuery("select * from users where username='" + userid + "' and password='" + pwd + "'");
     	    if (rs1.next()) {
-    	    	session.setAttribute("user", userid);
-    	    	session.setAttribute("account_type", rs1.getString("account_type"));
-    	        response.sendRedirect("account.jsp");
-    	        out.println("welcome " + userid);
-    	        out.println("<a href='logout.jsp'>Log out</a>");
-    	        out.println("<a href='account.jsp'>Account Page</a>");
+    	    	ResultSet rs2;
+    	    	rs2 = stmt.executeQuery("select * FROM users WHERE username='" + userid + 
+    	    			"' and password='"+ pwd + "' and account_type= 'user'");
+    	    	if (rs2.next()) {
+    	    		session.setAttribute("user", userid);
+        	        response.sendRedirect("enduserlanding.jsp");
+        	        out.println("welcome " + userid);
+        	        out.println("<a href='logout.jsp'>Log out</a>");
+        	        out.println("<a href='account.jsp'>Account Page</a>");
+    	    	} else {
+    	    		out.println("Invalid account type <a href='login.jsp'>Please try again</a>");
+    	    	}
     	    } else {
     	        out.println("Invalid password <a href='login.jsp'>Please try again</a>");
     	    }
