@@ -1,0 +1,87 @@
+CREATE TABLE users (
+  user_id int primary key,
+  user_password varchar(20) NOT NULL,
+  email varchar(20) NOT NULL,
+  name varchar(20) NOT NULL,
+  upper_limit float);
+
+
+CREATE TABLE admin (
+admin_id int primary key,
+admin_password varchar(20) NOT NULL);
+
+CREATE TABLE customer_representative (
+employee_id int, 
+employee_password varchar(20) NOT NULL;
+primary key(employee_id));
+
+CREATE TABLE buyers (
+  alerts varchar(50),
+  number_of_bids int,
+  upper_limit float,
+  user_id int,
+  foreign key (user_id) references users(user_id),
+  foreign key (upper_limit) references users(upper_limit));
+  
+CREATE TABLE sellers (
+   user_id int,
+   number_of_sales int,
+   user_id references users (user_id));
+   
+CREATE TABLE trades (
+  trade_id int primary key,
+  user_id int,
+  price float,
+  foreign key (userid) references users(userid));
+  
+CREATE TABLE questions(
+  user_questions varchar(300),
+  answers varchar(300),
+  user_id int,
+  employee_id int,
+  employee_id references customer_representative (employee_id),
+  user_id references users (user_id));
+
+CREATE TABLE autobid (
+   user_id int,
+   upper_limit float,
+   bid_id int,
+   foreign key (user_id) references users(user_id),
+   foreign key (upper_limit) references users(upper_limit)
+   foreign key (bid_id) references bids(bid_id));
+   
+CREATE TABLE bids(
+   bid_id int primary key,
+   date_time DATETIME NOT NULL,
+   user_id int,
+   price int NOT NULL,
+   foreign key (userid) references users(userid));
+
+CREATE TABLE auction(
+   auction_id int primary key,
+   item_name varchar(50) NOT NULL,
+   auction_type varchar(20) NOT NULL,
+   date_created DATETIME NOT NULL);
+
+CREATE TABLE salesreports (
+best_selling_enduser varchar(15),
+best_selling_item varchar(15), 
+earnings_per_seller int,
+earnings_per_buyer int, 
+earnings_per_item_type int, 
+earnings_per_item int, 
+total_earnings int); 
+
+customer_rep_has_users (user_id int, employee_id: int), primary key(user_id,employee_id), foreign key(user_id) references users, foreign key(employee_id) references customer_representative (employee_id));
+
+admin_has_customer_representative(admin_id int, employee_id int, primary key(admin_id), foreign key (employee_id) references customer_representative (employee_id) NOT NULL);
+
+auto_bid_updates_bid (upper_limit float, bid_id int, foreign key (upper_limit) references users (upper_limit) NOT NULL, foreign key (bid_id) references bid (bid_id) NOT NULL);
+
+users_make_trades(user_id int, trade_id int, primary key(user_id, trade_id), foreign key (user_id) references users, foreign key (trade_id) references trades (trade_id));
+
+customer_rep_deals_auction (auction_id int, employee_id int, primary key(auction_id, employee_id), foreign key(auction_id) references auction, foreign key(employee_id) references customer_representative (employee_id));
+
+bid_submitbid_auction(bid_id int, auction_id int, primary key(bid_id, auction_id), foreign key (bid_id) references bid, foreign key (auction_id) references auction (auction_id));
+
+trades_checks_autobid(trade_id:varchar(15), primary key (trade_id), foreign key (trade_id) references trades (trade_id));
