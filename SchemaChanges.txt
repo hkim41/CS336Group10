@@ -1,2 +1,2 @@
-Update users to match what is currently being used in the SQL Database
-Update admin and customerrep to reference the 'username' value in users rather than using an id.
+Updated users to match what is currently being used in the SQL Database
+Updated admin and customerrep to reference the 'username' value in users rather than using an id.
