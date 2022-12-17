@@ -35,7 +35,7 @@ CREATE TABLE trades (
   trade_id int primary key,
   user_id int,
   price float,
-  foreign key (userid) references users(userid));
+  foreign key (user_id) references users(userid));
   
 CREATE TABLE questions(
   user_questions varchar(300),
@@ -75,16 +75,16 @@ earnings_per_item_type int,
 earnings_per_item int, 
 total_earnings int); 
 
-customer_rep_has_users (user_id int, employee_id: int), primary key(user_id,employee_id), foreign key(user_id) references users, foreign key(employee_id) references customer_representative (employee_id));
+customer_rep_has_users (user_id int, employee_id int), primary key(user_id,employee_id), foreign key(user_id) references users (user_id), foreign key(employee_id) references customer_representative (employee_id));
 
 admin_has_customer_representative(admin_id int, employee_id int, primary key(admin_id), foreign key (employee_id) references customer_representative (employee_id) NOT NULL);
 
 auto_bid_updates_bid (upper_limit float, bid_id int, foreign key (upper_limit) references users (upper_limit) NOT NULL, foreign key (bid_id) references bid (bid_id) NOT NULL);
 
-users_make_trades(user_id int, trade_id int, primary key(user_id, trade_id), foreign key (user_id) references users, foreign key (trade_id) references trades (trade_id));
+users_make_trades(user_id int, trade_id int, primary key(user_id, trade_id), foreign key (user_id) references users (user_id), foreign key (trade_id) references trades (trade_id));
 
-customer_rep_deals_auction (auction_id int, employee_id int, primary key(auction_id, employee_id), foreign key(auction_id) references auction, foreign key(employee_id) references customer_representative (employee_id));
+customer_rep_deals_auction (auction_id int, employee_id int, primary key(auction_id, employee_id), foreign key(auction_id) references auction (auction_id) , foreign key(employee_id) references customer_representative (employee_id));
 
-bid_submitbid_auction(bid_id int, auction_id int, primary key(bid_id, auction_id), foreign key (bid_id) references bid, foreign key (auction_id) references auction (auction_id));
+bid_submitbid_auction(bid_id int, auction_id int, primary key(bid_id, auction_id), foreign key (bid_id) references bid (bid_id), foreign key (auction_id) references auction (auction_id));
 
 trades_checks_autobid(trade_id:varchar(15), primary key (trade_id), foreign key (trade_id) references trades (trade_id));
