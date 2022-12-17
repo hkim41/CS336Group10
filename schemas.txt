@@ -1,22 +1,29 @@
 //all data types are to be edited based on the code.
 
 
-CREATE TABLE users (
-  user_id int primary key,
-  user_password varchar(20) NOT NULL,
-  email varchar(20) NOT NULL,
-  name varchar(20) NOT NULL,
-  upper_limit float);
+CREATE TABLE `users` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `address` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `account_type` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+)
 
+CREATE TABLE `admin` (
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  PRIMARY KEY (`username`),
+  CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
+)
 
-CREATE TABLE admin (
-admin_id int primary key,
-admin_password varchar(20) NOT NULL);
-
-CREATE TABLE customer_representative (
-employee_id int, 
-employee_password varchar(20) NOT NULL;
-primary key(employee_id));
+CREATE TABLE `customerrep` (
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  PRIMARY KEY (`username`),
+  CONSTRAINT `customerrep_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
+)
 
 CREATE TABLE buyers (
   alerts varchar(50),
