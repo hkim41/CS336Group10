@@ -44,13 +44,18 @@ CREATE TABLE trades (
   price float,
   foreign key (user_id) references users(userid));
   
-CREATE TABLE questions(
-  user_questions varchar(300),
-  answers varchar(300),
-  user_id int,
-  employee_id int,
-  employee_id references customer_representative (employee_id),
-  user_id references users (user_id));
+CREATE TABLE `questions` (
+  `question_id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) DEFAULT NULL,
+  `customerrep_username` varchar(50) DEFAULT NULL,
+  `user_questions` varchar(300) DEFAULT NULL,
+  `answers` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`question_id`),
+  KEY `username` (`username`),
+  KEY `customerrep_username` (`customerrep_username`),
+  CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE,
+  CONSTRAINT `questions_ibfk_2` FOREIGN KEY (`customerrep_username`) REFERENCES `customerrep` (`username`) ON DELETE CASCADE
+)
 
 CREATE TABLE autobid (
    user_id int,
