@@ -1,3 +1,6 @@
+//all data types are to be edited based on the code.
+
+
 CREATE TABLE users (
   user_id int primary key,
   user_password varchar(20) NOT NULL,
