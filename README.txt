@@ -12,7 +12,7 @@ end users
 user: hk345 password: 336BuyMe
 
 customer rep
-user: hk345 password: 336BuyMe
+user: hk345 password: Conway
 
 admin
 user: adminuser123 password: 1234
