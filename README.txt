@@ -20,5 +20,9 @@ user: adminuser123 password: 1234
 put your database password in ApplicationDB.java
 
 Contributions:
+Hayoon Kim: User login/logout, account creation, landing pages, user schemas
+Conway Zhou: Video script
+Yash Puranik: Auction schemas
+Yebin Kim: Auction schemas
 
 Assumptions:
