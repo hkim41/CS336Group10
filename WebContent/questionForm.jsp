@@ -7,7 +7,7 @@
 <title>Ask a question here</title>
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return to Accounts Page</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to Home Page</button>
 	<div class="frontend">
 		<h2>Submit a new question:</h2>
 		<form action="questionsHandler.jsp" method="post">
