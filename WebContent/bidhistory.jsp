@@ -7,8 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>View Bid History</title>
-<link rel="stylesheet"
-		href=""> <!--add a css reference here-->
 </head>
 <body>
 	<button onclick="window.location.href='';">Return to home</button> <!--href location would be the jsp page for the user-->
@@ -22,7 +20,7 @@
 
 	try {
 		
-		String str = "select * from auction join bid using (auction_id) join product using (product_id) where buyer = '" + username + "' order by amount "; <!--added product id as a filler. We need to make a schema with product ID-->
+		String str = "select * from auction join bid using (auction_id) join item using (item_id) where buyer = '" + username + "' order by amount ";
 ;
 		result = stmt.executeQuery(str);
 		
