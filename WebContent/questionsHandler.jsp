@@ -22,7 +22,7 @@ try {
 		ps = conn.prepareStatement(insert);
 		ps.setString(1, username);
 		ps.setString(2, question);
-		ps.setString(3, "Customer rep hasn't answered yet");
+		ps.setString(3, "Customer rep hasnt answered yet");
 		int result = 0;
 		result = ps.executeUpdate();
 		if (result < 1) {
@@ -40,7 +40,7 @@ try {
 				here to ask a question.</a>
 		</p>
 		<p>
-			Otherwise, <a href="HelloWorld.jsp">click here to return to the
+			Otherwise, <a href="enduserlanding.jsp">click here to return to the
 				home page.</a><% 
 		return;
 	}
