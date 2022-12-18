@@ -84,15 +84,15 @@
 			out.print("</td>");
 			
 			out.print("<td>");
-			out.print(result.getString("brand"));
+			out.print(result.getString("number_packs"));
 			out.print("</td>");
 			
 			out.print("<td>");
-			out.print(result.getString("color"));
+			out.print(result.getString("set"));
 			out.print("</td>");
 			
 			out.print("<td>");
-			out.print(result.getString("gender"));
+			out.print(result.getString("featured_pokemon"));
 			out.print("</td>");
 			
 			out.print("<td>");
