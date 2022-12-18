@@ -6,5 +6,4 @@ Updated questions to reference the username in users and customerrep
 Changed item name to item id as it is easier to list
 Removed buyer and seller tables and made them attributes, referencing foreign key username from users.
 Merged bids and autobid, using autobid as a boolean feature.
-
-Need to create item table to handle products being sold.
+Removed trades
