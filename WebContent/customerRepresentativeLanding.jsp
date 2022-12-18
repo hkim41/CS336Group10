@@ -7,6 +7,12 @@
 <title>Customer Representative Landing</title>
 </head>
 <body>
-
+<h1>Customer Representative Dashboard</h1>
+<ul>
+<li> <a href="answerQuestions.jsp">Answer User Questions</a> </li>
+<li> <a>Manage User Accounts</a> </li>
+<li> <a>Remove Auctions</a> </li>
+<li> <a href="logout.jsp">Logout</a> </li>
+</ul>
 </body>
 </html>
