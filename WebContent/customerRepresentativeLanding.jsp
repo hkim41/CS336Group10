@@ -11,7 +11,8 @@
 <ul>
 <li> <a href="answerQuestions.jsp">Answer User Questions</a> </li>
 <li> <a>Manage User Accounts</a> </li>
-<li> <a>Remove Auctions</a> </li>
+<li> <a href="managebids.jsp">Remove Bids</a> </li>
+<li> <a href="manageAuctions.jsp">Remove Auctions</a> </li>
 <li> <a href="logout.jsp">Logout</a> </li>
 </ul>
 </body>
