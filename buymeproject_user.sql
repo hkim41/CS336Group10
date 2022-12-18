@@ -141,3 +141,83 @@ LOCK TABLES `questions` WRITE;
 INSERT INTO `questions` VALUES (1,'conway1','hk345','How can I start a bid?','like this');
 /*!40000 ALTER TABLE `questions` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `product`
+--
+
+DROP TABLE IF EXISTS `item`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `item` (
+  `item_id` int NOT NULL AUTO_INCREMENT,
+  `category` varchar(50) DEFAULT NULL,
+  `number_packs` varchar(25) DEFAULT NULL,
+  `set` varchar(20) DEFAULT NULL,
+  `featured_pokemon` varchar(20) DEFAULT NULL,
+  `seller` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`item_id`),
+  KEY `seller` (`seller`),
+  CONSTRAINT `item_ibfk_1` FOREIGN KEY (`seller`) REFERENCES `users` (`username`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `item`
+--
+
+LOCK TABLES `item` WRITE;
+/*!40000 ALTER TABLE `item` DISABLE KEYS */;
+INSERT INTO `item` VALUES (10,'Elite Trainer Box','8','Astral Radiance','None','conway1');
+/*!40000 ALTER TABLE `item` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auction`
+--
+
+DROP TABLE IF EXISTS `auction`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auction` (
+  `auction_id` int NOT NULL AUTO_INCREMENT,
+  `item_id` int DEFAULT NULL,
+  `seller` varchar(50) DEFAULT NULL,
+  `new_bid_increment` float DEFAULT '1',
+  `min_price` float DEFAULT '0',
+  `price` float DEFAULT '0',
+  `status` varchar(10) DEFAULT NULL,
+  `start_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `end_date` datetime DEFAULT NULL,
+  `winner` varchar(20) DEFAULT NULL,
+  `current_bid` float DEFAULT '0',
+  PRIMARY KEY (`auction_id`),
+  KEY `seller` (`seller`),
+  KEY `item_id` (`item_id`),
+  CONSTRAINT `auction_ibfk_1` FOREIGN KEY (`seller`) REFERENCES `item` (`seller`) ON DELETE CASCADE,
+  CONSTRAINT `auction_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `item` (`item_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `bid`
+--
+
+DROP TABLE IF EXISTS `bid`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `bid` (
+  `bid_id` int NOT NULL AUTO_INCREMENT,
+  `buyer` varchar(50) DEFAULT NULL,
+  `upper_limit` float DEFAULT '0',
+  `is_autobid` tinyint(1) DEFAULT '0',
+  `bid_increment` float DEFAULT '0',
+  `amount` float DEFAULT '0',
+  `auction_id` int DEFAULT NULL,
+  PRIMARY KEY (`bid_id`),
+  KEY `buyer` (`buyer`),
+  KEY `auction_id` (`auction_id`),
+  CONSTRAINT `bid_ibfk_1` FOREIGN KEY (`buyer`) REFERENCES `users` (`username`),
+  CONSTRAINT `bid_ibfk_2` FOREIGN KEY (`auction_id`) REFERENCES `auction` (`auction_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
