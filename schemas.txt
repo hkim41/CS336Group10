@@ -72,12 +72,6 @@ CREATE TABLE `auction` (
   CONSTRAINT `auction_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `item` (`item_id`) ON DELETE CASCADE
 )
 
-CREATE TABLE trades (
-  trade_id int primary key,
-  user_id int,
-  price float,
-  foreign key (user_id) references users(userid));
-
 CREATE TABLE salesreports (
 best_selling_enduser varchar(15),
 best_selling_item varchar(15), 
