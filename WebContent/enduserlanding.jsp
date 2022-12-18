@@ -9,9 +9,12 @@
 <body>
 <h1>User Dashboard</h1>
 <ul>
-<li> <a>Manage sales</a> </li>
-<li> <a>Manage purchases</a> </li>
-<li> <a>View current auctions</a> </li>
+<li> <a>Create auctions</a> </li>
+<li> <a>See my auctions</a> </li>
+<li> <a>See current auctions</a> </li>
+<li> <a>Set alerts</a> </li>
+<li> <a href="bidhistory.jsp">View auction history</a> </li>
+<li> <a href="questionForm.jsp">Questions page</a> </li>
 <li> <a href="account.jsp">Account settings</a></li>
 </ul>
 </body>
