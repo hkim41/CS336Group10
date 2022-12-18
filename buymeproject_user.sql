@@ -138,7 +138,7 @@ CREATE TABLE `questions` (
 
 LOCK TABLES `questions` WRITE;
 /*!40000 ALTER TABLE `questions` DISABLE KEYS */;
-INSERT INTO `questions` VALUES (1,'conway1','hk345','How can I start a bid?','like this');
+INSERT INTO `questions` VALUES (1,'conway1','hk345','How can I start a bid?','like this'),(2,'conway1','hk345','How can I start a bid?','Customer rep hasnt answered yet');
 /*!40000 ALTER TABLE `questions` ENABLE KEYS */;
 UNLOCK TABLES;
 
