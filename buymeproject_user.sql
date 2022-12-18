@@ -200,6 +200,16 @@ CREATE TABLE `auction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `auction`
+--
+
+LOCK TABLES `auction` WRITE;
+/*!40000 ALTER TABLE `auction` DISABLE KEYS */;
+INSERT INTO `auction` VALUES (16,10,'conway1',30,60,40,'close','2022-12-17 21:44:50','2022-12-19 21:44:50','Yoon',50);
+/*!40000 ALTER TABLE `auction` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `bid`
 --
 
@@ -221,3 +231,44 @@ CREATE TABLE `bid` (
   CONSTRAINT `bid_ibfk_2` FOREIGN KEY (`auction_id`) REFERENCES `auction` (`auction_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bid`
+--
+
+LOCK TABLES `bid` WRITE;
+/*!40000 ALTER TABLE `bid` DISABLE KEYS */;
+INSERT INTO `bid` VALUES (10,NULL,200,1,20,15,16);
+/*!40000 ALTER TABLE `bid` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `alerts`
+--
+
+DROP TABLE IF EXISTS `alerts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `alerts` (
+  `alert_id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) DEFAULT NULL,
+  `alert_message` varchar(1000) DEFAULT NULL,
+  `item_id` int DEFAULT '0',
+  `auction_id` int DEFAULT '0',
+  PRIMARY KEY (`alert_id`),
+  KEY `username` (`username`),
+  KEY `item_id` (`item_id`),
+  CONSTRAINT `alerts_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE,
+  CONSTRAINT `alerts_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `item` (`item_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `alerts`
+--
+
+LOCK TABLES `alerts` WRITE;
+/*!40000 ALTER TABLE `alerts` DISABLE KEYS */;
+INSERT INTO `alerts` VALUES (36,'conway1','You have been outbidded by Yoon, who has currently bidded a ton of money. Bid now to get the item!',10,16);
+/*!40000 ALTER TABLE `alerts` ENABLE KEYS */;
+UNLOCK TABLES;
