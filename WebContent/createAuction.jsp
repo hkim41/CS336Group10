@@ -11,7 +11,7 @@
 		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>  
-	<button onclick="window.location.href='account.jsp';">Return to Homepage</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to Homepage</button>
 
 <h3> Start an Auction</h3>
 	<div class="content">
@@ -19,7 +19,7 @@
 	<table>
 	 <tr> 
 	 <td>
-	<input type="hidden" name="product_id" value = <%=request.getParameter("product_id")%>>
+	<input type="hidden" name="item_id" value = <%=request.getParameter("item_id")%>>
 	</td>
 	</tr> 
 	<tr>    
