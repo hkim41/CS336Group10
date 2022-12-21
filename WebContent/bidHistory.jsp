@@ -9,7 +9,7 @@
 <title>View Bid History</title>
 </head>
 <body>
-	<button onclick="window.location.href='enduserlanding.jsp';">Return to home</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to user landing</button>
 <h2>My bid history</h2>
 	<%
 	ApplicationDB db = new ApplicationDB();
