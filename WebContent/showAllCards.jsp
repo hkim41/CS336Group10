@@ -6,13 +6,11 @@
 <html>
 <head>
 <title>Show All Cards</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
 
 	
-	<button onclick="window.location.href='account.jsp';">Return to account dashboard</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to user landing</button>
 <h3> List of all available Cards.</h3>
 	<%
 	try {
