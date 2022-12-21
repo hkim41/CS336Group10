@@ -22,11 +22,10 @@
 		String str = "select * from product;";
 		ResultSet result = null;
 		result = stmt.executeQuery(str);
-
 		out.print("<table>");
 		out.print("<tr>");
 		out.print("<th>");
-		out.print("Product ID ");
+		out.print("Item ID ");
 		out.print("</th>");
 		out.print("<th>");
 		out.print("Category");
@@ -44,29 +43,24 @@
 		out.print("<th>");
 		out.print("Seller");
 		out.print("</th>");
-
 		out.print("<th>");
 		out.print(" ");
 		out.print("</th>");
 		out.print("</tr>");
-
 		while (result.next()) {
 			out.print("<tr>");
 			out.print("<td>");
-			out.print(result.getInt("product_id"));
+			out.print(result.getInt("item_id"));
 			out.print("</td>");
 			out.print("<td>");
 			out.print(result.getString("category"));
 			out.print("</td>");
-
 			out.print("<td>");
 			out.print(result.getString("brand"));
 			out.print("</td>");
-
 			out.print("<td>");
 			out.print(result.getString("card color"));
 			out.print("</td>");
-
 			out.print("<td>");
 			out.print(result.getString("box size"));
 			out.print("</td>");
@@ -80,25 +74,22 @@
 			{
 			
 			out.print("<td>");
-			out.print("<form action='createAuction.jsp' method='post'><button name='product_id' type='submit' value='"
-			+ result.getInt("product_id") + "'>Create Auction</button></form>");
+			out.print("<form action='createAuction.jsp' method='post'><button name='item_id' type='submit' value='"
+			+ result.getInt("item_id") + "'>Create Auction</button></form>");
 			out.print("</td>");
 			}
 			
 			else{
 			out.print("<td>");
-			out.print("<form action='createAlertProduct.jsp' method='post'><button name='product_id' type='submit' value='"
-			+ result.getInt("product_id") + "'> Alert Me! </button></form>");
+			out.print("<form action='createAlertItem.jsp' method='post'><button name='item_id' type='submit' value='"
+			+ result.getInt("item_id") + "'> Alert Me! </button></form>");
 			out.print("</td>");
 			}
 			
-
 			out.print("</tr>");
 		}
 		out.print("</table>");
-
 		con.close();
-
 	} catch (Exception e) {
 	}
 	%>
