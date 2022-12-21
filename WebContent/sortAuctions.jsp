@@ -5,16 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="ISO-8859-1">
 <title>Sort Auctions</title>
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
-	<style>
-			body {
-			margin: 0;
-			}
-		</style>
 </head>
 <body>
 	<button onclick="window.location.href='account.jsp';">Return
@@ -53,7 +45,7 @@
 	String seller = session.getAttribute("user").toString();
 	ResultSet result = null;
 	try {
-		String str = "select * from auction join product using (product_id) where status = 'open' order by (auction_id);";
+		String str = "select * from auction join item using (item_id) where status = 'open' order by (auction_id);";
 		result = stmt.executeQuery(str);
 
 		out.print("<table>");
@@ -170,4 +162,3 @@
 	%>
 </body>
 </html>
-
