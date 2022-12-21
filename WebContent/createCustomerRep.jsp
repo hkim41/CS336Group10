@@ -5,6 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Create customer representatives</title>
+<link rel="stylesheet" 
+	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
 	<button onclick="window.location.href='adminlanding.jsp';">Return to Admin landing</button>
