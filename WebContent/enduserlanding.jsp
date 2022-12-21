@@ -23,7 +23,7 @@
 <ul>
 <li><a href="filterItems.jsp">Filter Items</a></li>
 <li><a href="searchItems.jsp">Search Items</a></li>
-<li><a href="searchAuctionsByUsers.jsp">Search Auctions By Users</a></li>
+<li><a href="searchAuctionsByUser.jsp">Search Auctions By Users</a></li>
 </ul>
 </body>
 </html>
