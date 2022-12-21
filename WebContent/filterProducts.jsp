@@ -20,9 +20,7 @@
 				id="category" required>
 				<option value="" disabled selected hidden="true">select
 					category</option>
-				<option value="Analog Watches">Analog Watches</option>
-				<option value="Digital Watches">Digital Watches</option>
-				<option value="Touchscreen Watches">Touchscreen Watches</option>
+				<option value="Cards">Cards</option>
 			</select> <br>
 		<table>
 		<tr>
