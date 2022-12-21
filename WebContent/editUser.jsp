@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="com.cs336.pkg.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Edit User</title>
-<link rel="stylesheet"
-		href=""> <!--add css reference-->
 </head>
 <body>
 	<button onclick="window.location.href='manageUsers.jsp';">Return to Manage Users Page</button>
@@ -20,7 +18,7 @@
 	PreparedStatement ps = null;
 	ResultSet result = null;
 	String username = request.getParameter("username");
-	String str = "select * from account where username = ?";
+	String str = "select * from users where username = ?";
 	ps = con.prepareStatement(str);
 	ps.setString(1, username);
 	result = ps.executeQuery();
