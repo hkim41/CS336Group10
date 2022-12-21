@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
@@ -9,8 +8,6 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Best Selling Items</title>
-<link rel="stylesheet" 
-	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
 	<button onclick="window.location.href='generateSalesReport.jsp';">Return to Generate Sales Report Page</button>
@@ -26,14 +23,14 @@
 
 		out.print("<b>Best Selling items: </b>");
 
-		String str = "SELECT p.product_id, p.category, p.brand, p.cardcolor, p.boxsize, count(*) FROM auction a, product p WHERE a.status='close' and a.current_bid>=a.min_price and a.product_id=p.product_id group by p.product_id order by count(*) desc limit 5";
+		String str = "SELECT p.item_id, p.category, p.brand, p.cardcolor, p.boxsize, count(*) FROM auction a, item p WHERE a.status='close' and a.current_bid>=a.min_price and a.item_id=p.item_id group by p.item_id order by count(*) desc limit 5";
 		result = stmt.executeQuery(str);
 
 		out.print("<table>");
 		out.print("<tr>");
 
 		out.print("<th>");
-		out.print("Product ID");
+		out.print("Item ID");
 		out.print("</th>");
 
 		out.print("<th>");
@@ -59,7 +56,7 @@
 
 		while (result.next()) {
 			out.print("<td>");
-			out.print(result.getInt("product_id"));
+			out.print(result.getInt("item_id"));
 			out.print("</td>");
 
 			out.print("<td>");
