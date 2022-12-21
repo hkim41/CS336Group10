@@ -10,6 +10,6 @@
 </head>
 <body>
 <h2>Alert set successfully!</h2>
-<a href="showAllWatch.jsp">see watched auctions</a>
+<a href="showAllCards.jsp">see watched auctions</a>
 </body>
 </html>
