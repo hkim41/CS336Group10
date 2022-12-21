@@ -17,7 +17,7 @@
 		ApplicationDB db = new ApplicationDB();
 		Connection con = db.getConnection();
 		Statement stmt = con.createStatement();
-		String str = "select * from product;";
+		String str = "select * from item;";
 		ResultSet result = null;
 		result = stmt.executeQuery(str);
 		out.print("<table>");
