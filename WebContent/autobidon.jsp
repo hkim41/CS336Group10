@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Check autobid is on</title>
-<link rel="stylesheet"
-		href=""><!--add a css reference here-->
 </head>
 <body>
 <button onclick="window.location.href='';">Return to Auctions Page</button><!--add a reference to jsp page for auction sort in href=''-->
