@@ -8,6 +8,8 @@
 <meta charset="ISO-8859-1">
 <title>Check Customer Representative Account Creation Details</title>
 </head>
+<link rel="stylesheet" 
+	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 <body>
 	<%
 	String userid = request.getParameter("username");
