@@ -16,11 +16,11 @@
 		Connection conn = db.getConnection();
 		String username = session.getAttribute("customerrep_username").toString();
 		int question_id = Integer.parseInt(request.getParameter("question_id"));
-		String answer = request.getParameter("answers");
-		if (answer != null) {
+		String answers = request.getParameter("answers");
+		if (answers != null) {
 			String insert = "UPDATE questions SET answers=?, customerrep_username = ? WHERE question_id=?";
 			ps = conn.prepareStatement(insert);
-			ps.setString(1, answer);
+			ps.setString(1, answers);
 			ps.setString(2, username);
 			ps.setInt(3, question_id);
 			int result = 0;
