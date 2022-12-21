@@ -7,11 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Create Auction</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>  
-	<button onclick="window.location.href='account.jsp';">Return to home</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to dashboard</button>
 
 <h3>New Auction</h3>
 	<div class="content">
@@ -19,7 +17,7 @@
 	<table>
 	 <tr> 
 	 <td>
-	<input type="hidden" name="product_id" value = <%=request.getParameter("product_id")%>>
+	<input type="hidden" name="item_id" value = <%=request.getParameter("item_id")%>>
 	</td>
 	</tr> 
 	<tr>    
