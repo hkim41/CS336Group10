@@ -19,7 +19,7 @@
 	ResultSet result = null;
 	String user = session.getAttribute("user").toString();
 	int auction_id = Integer.parseInt(request.getParameter("auction_id"));
-	String str = "SELECT * FROM auction a, product p WHERE a.product_id=p.product_id and a.auction_id=" + auction_id;
+	String str = "SELECT * FROM auction a, item p WHERE a.item_id=p.item_id and a.auction_id=" + auction_id;
 	result = stmt.executeQuery(str);
 	result.next();
 
@@ -30,7 +30,7 @@
 	java.sql.Timestamp start_date = result.getTimestamp("start_date");
 	java.sql.Timestamp end_date = result.getTimestamp("end_date");
 
-	str = "SELECT * FROM auction a, product p WHERE a.product_id=p.product_id and (p.cardcolor='" + cardcolor + "' or p.boxsize='"
+	str = "SELECT * FROM auction a, item p WHERE a.item_id=p.item_id and (p.cardcolor='" + cardcolor + "' or p.boxsize='"
 			+ boxsize + "' or p.category='" + category + "' or p.brand='" + brand
 			+ "') and a.start_date >= DATE_ADD(NOW(), INTERVAL -1 MONTH)";
 	Statement stmt1 = con.createStatement();
@@ -142,6 +142,5 @@
 	}
 	out.print("</table>");
 	%>
-
 </body>
 </html>
