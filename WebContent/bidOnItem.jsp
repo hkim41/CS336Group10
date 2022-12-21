@@ -7,8 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Bid on Item</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+
 </head>
 <body>
 	<button onclick="window.location.href='sortAuctions.jsp';">Return to Auctions</button>
