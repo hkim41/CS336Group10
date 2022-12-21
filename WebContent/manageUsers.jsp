@@ -1,16 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="com.cs336.pkg.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Manage Users</title>
-<link rel="stylesheet"
-		href=""> <!--add css reference-->
 </head>
 <body>
-	<button onclick="window.location.href='customerRepresentativeLanding.jsp';">Return to account page</button><br>
+	<button onclick="window.location.href='customerRepresentativeLanding.jsp';">Return to customer rep landing page</button><br>
 	<h3>Manage User Accounts</h3>
 	<form>
 		<input type="text" name="search" placeholder="username">
@@ -23,7 +21,7 @@
 		Connection con = db.getConnection();
 		Statement state = con.createStatement();
 		String entity = request.getParameter("search");
-		String str = "SELECT * FROM account WHERE username LIKE'%" + entity
+		String str = "SELECT * FROM users WHERE username LIKE'%" + entity
 		+ "%' AND username NOT IN (SELECT username FROM admin) AND username NOT IN(SELECT username FROM customerrep)";
 		ResultSet result = state.executeQuery(str);
 
@@ -74,6 +72,5 @@
 	} catch (Exception e) {
 	}
 	%>
-
 </body>
 </html>
