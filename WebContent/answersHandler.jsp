@@ -7,8 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Answers Handler</title>
-<link rel="stylesheet" 
-	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
 	<%
@@ -46,7 +44,7 @@
 	out.print("<p>Error</p>" + e);
 	e.printStackTrace();
 	} finally {
-	ps.close();
+	//ps.close();
 	}
 	%>
 </body>
