@@ -9,7 +9,7 @@
 <title>My Auctions</title>
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return to Account page</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to End User Landing Page</button>
 <h3> List of auctions started by me!</h3>
 	<%
 	ApplicationDB db = new ApplicationDB();
