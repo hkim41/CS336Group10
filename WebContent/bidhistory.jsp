@@ -7,8 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>View Bid History</title>
-<link rel="stylesheet"
-		href=""> <!--add a css reference here-->
+
 </head>
 <body>
 	<button onclick="window.location.href='';">Return to home</button> <!--href location would be the jsp page for the user-->
