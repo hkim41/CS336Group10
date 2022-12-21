@@ -9,7 +9,7 @@
 <title>view auctions that users have participated in</title>
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return to Account Page</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to User Landing Page</button>
 <h2> View Auctions that Other Users have participated in</h2>
 <p> The auctions the user has either created or bid on</p>"
 	<%
