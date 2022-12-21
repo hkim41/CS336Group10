@@ -22,7 +22,7 @@
 		Connection con = db.getConnection();
 		Statement stmt = con.createStatement();
 		String entity = request.getParameter("search");
-		String str = "SELECT question,answer FROM questions WHERE question LIKE'%" + entity + "%' or answer like '%" + entity + "%'";
+		String str = "SELECT user_questions,answers FROM questions WHERE user_questions LIKE'%" + entity + "%' or answers like '%" + entity + "%'";
 		ResultSet result = stmt.executeQuery(str);
 		out.print("<table>");
 		out.print("<tr>");
@@ -41,10 +41,10 @@
 		while (result.next()) {
 			out.print("<tr>");
 			out.print("<td>");
-			out.print(result.getString("question"));
+			out.print(result.getString("user_questions"));
 			out.print("</td>");
 			out.print("<td>");
-			out.print(result.getString("answer"));
+			out.print(result.getString("answers"));
 			out.print("</td>");
 			
 			out.print("<td>");
