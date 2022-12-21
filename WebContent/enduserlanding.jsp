@@ -10,9 +10,9 @@
 <h1>User Dashboard</h1>
 <ul>
 <li> <a>Create auctions</a> </li>
-<li> <a>See my auctions</a> </li>
-<li> <a>See current auctions</a> </li>
-<li> <a>Set alerts</a> </li>
+<li> <a href="myAuctions.jsp">See my auctions</a> </li>
+<li> <a href="sortAuctions.jsp">See current auctions</a> </li>
+<li> <a href="viewAlerts.jsp">View alerts</a> </li>
 <li> <a href="bidhistory.jsp">View auction history</a> </li>
 <li> <a href="questionForm.jsp">Questions page</a> </li>
 <li> <a href="account.jsp">Account settings</a></li>
