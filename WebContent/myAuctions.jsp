@@ -7,11 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>My Auctions</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return to Homepage</button>
+	<button onclick="window.location.href='account.jsp';">Return to Account page</button>
 <h3> List of auctions started by me!</h3>
 	<%
 	ApplicationDB db = new ApplicationDB();
@@ -20,7 +18,7 @@
 	String seller = session.getAttribute("user").toString();
 	ResultSet result = null;
 	try {
-		String str = "select * from auction a join product using (product_id) where a.seller = ? order by (auction_id) ";
+		String str = "select * from auction a join item using (item_id) where a.seller = ? order by (auction_id) ";
 		PreparedStatement ps = con.prepareStatement(str);
 		ps.setString(1, seller);
 		result = ps.executeQuery();
@@ -154,11 +152,5 @@
 			con.close();
 	}
 	%>
-
-
-
-
-
 </body>
 </html>
-
