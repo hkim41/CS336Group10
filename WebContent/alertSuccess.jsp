@@ -7,6 +7,7 @@
 <title>success</title>
 <link rel="stylesheet"
 		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+	
 </head>
 <body>
 <h2>Alert set successfully!</h2>
