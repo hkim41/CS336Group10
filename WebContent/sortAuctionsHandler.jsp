@@ -7,13 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Sort Auctions</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
-		<style>
-			body {
-			margin: 0;
-			}
-		</style>
 </head>
 <body>
 	<button onclick="window.location.href='sortAuctions.jsp';">Return to all auctions</button>
@@ -51,37 +44,37 @@
 			if(order.equals("ascending"))
 			{
 			if (checked.equals("Sort by Auction ID")) {
-				str = "select * from auction join product using (product_id) where status = 'open' order by (auction_id);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (auction_id);";
 			} else if (checked.equals("Sort by Brand")) {
-				str = "select * from auction join product using (product_id) where status = 'open' order by (brand);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (brand);";
 			} else if (checked.equals("Sort by Card Color")) {
-				str = "select * from auction join product using (product_id) where status = 'open' order by (cardcolor);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (cardcolor);";
 			} else if (checked.equals("Sort by End Time")) {
-				str = "select * from auction join product using (product_id) where status = 'open' order by (end_date);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (end_date);";
 			} else if (checked.equals("Sort by Box Size")) {
-				str = "select * from auction join product using (product_id) where status = 'open' order by (Box Size);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (Box Size);";
 			} else if (checked.equals("Sort by Price")) {
-				str = "select * from auction join product using (product_id) where status = 'open' order by (price);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (price);";
 			} else if (checked.equals("Sort by Category")) {
-				str = "select * from auction join product using (product_id) where status = 'open' order by (category);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (category);";
 			}
 			}
 			else
 			{
 				if (checked.equals("Sort by Auction ID")) {
-					str = "select * from auction join product using (product_id) where status = 'open' order by (auction_id) desc;";
+					str = "select * from auction join item using (item_id) where status = 'open' order by (auction_id) desc;";
 				} else if (checked.equals("Sort by Brand")) {
-					str = "select * from auction join product using (product_id) where status = 'open' order by (brand) desc;";
+					str = "select * from auction join item using (item_id) where status = 'open' order by (brand) desc;";
 				} else if (checked.equals("Sort by Card Color")) {
-					str = "select * from auction join product using (product_id) where status = 'open' order by (cardcolor) desc;";
+					str = "select * from auction join item using (item_id) where status = 'open' order by (cardcolor) desc;";
 				} else if (checked.equals("Sort by End Time")) {
-					str = "select * from auction join product using (product_id) where status = 'open' order by (end_date) desc;";
+					str = "select * from auction join item using (item_id) where status = 'open' order by (end_date) desc;";
 				} else if (checked.equals("Sort by Box Size")) {
-					str = "select * from auction join product using (product_id) where status = 'open' order by (boxsize) desc;";
+					str = "select * from auction join item using (item_id) where status = 'open' order by (boxsize) desc;";
 				} else if (checked.equals("Sort by Price")) {
-					str = "select * from auction join product using (product_id) where status = 'open' order by (price) desc;";
+					str = "select * from auction join item using (item_id) where status = 'open' order by (price) desc;";
 				} else if (checked.equals("Sort by Category")) {
-					str = "select * from auction join product using (product_id) where status = 'open' order by (category) desc;";
+					str = "select * from auction join item using (item_id) where status = 'open' order by (category) desc;";
 				}
 			}
 
