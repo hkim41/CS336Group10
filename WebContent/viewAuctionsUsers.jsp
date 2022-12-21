@@ -2,20 +2,16 @@
 	pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
-
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="ISO-8859-1">
 <title>view auctions that users have participated in</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
 	<button onclick="window.location.href='account.jsp';">Return to Account Page</button>
 <h2> View Auctions that Other Users have participated in</h2>
-<p> The auctions he has either created or bid on</p>"
+<p> The auctions the user has either created or bid on</p>"
 	<%
 	ApplicationDB db = new ApplicationDB();
 	Connection con = db.getConnection();
@@ -68,6 +64,5 @@
 			con.close();
 	}
 	%>
-
 </body>
 </html>
