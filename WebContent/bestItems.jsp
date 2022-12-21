@@ -9,8 +9,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Best Selling Items</title>
-<link rel="stylesheet"
-		href=""> <!--add a css reference here-->
+
 </head>
 <body>
 	<button onclick="window.location.href='';">Return to Sales Report Page</button> <!--add a reference to generate sales report .jsp at href='';-->
