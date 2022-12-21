@@ -9,7 +9,7 @@
 <title>Top Buyers</title>
 </head>
 <body>
-	<button onclick="window.location.href='';">Return to sales reports</button>
+	<button onclick="window.location.href='generateSalesReports.jsp';">Return to sales reports</button>
 <h2>List of Top Buyers</h2>
 
 <p> Top buyers</p>
