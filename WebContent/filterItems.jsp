@@ -7,8 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Filter Items</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 	
 </head>
 <body>
