@@ -5,11 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>check autobid is off</title>
-<link rel="stylesheet"
-		href=""><!--add a css reference here-->
+
 </head>
 <body>
-	<button onclick="window.location.href='';">Return to Auctions Page</button> <!--add a reference to jsp page for auction sort in href=''-->
+	<button onclick="window.location.href='sortAuctions.jsp';">Return to Auctions Page</button> <!--add a reference to jsp page for auction sort in href=''-->
 
    <form action="checkBid.jsp" method="POST">	
 	<table>
