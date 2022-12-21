@@ -9,10 +9,11 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Best Selling Items</title>
-
+<link rel="stylesheet" 
+	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
-	<button onclick="window.location.href='';">Return to Sales Report Page</button> <!--add a reference to generate sales report .jsp at href='';-->
+	<button onclick="window.location.href='generateSalesReport.jsp';">Return to Sales Report Page</button> <!--add a reference to generate sales report .jsp at href='';-->
 <h2>View Best Selling Items</h2>
 <p> Best selling items are the items that sold the most at auction</p>
 	<%
