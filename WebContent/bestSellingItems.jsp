@@ -9,12 +9,13 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Best Selling Items</title>
-
+<link rel="stylesheet" 
+	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
 	<button onclick="window.location.href='generateSalesReport.jsp';">Return to Generate Sales Report Page</button>
 <h2>View Best Selling Items</h2>
-<p> Best selling items are based on how many times that item was sold in an auction</p>
+<p> number of times an item has been sold in auction</p>
 	<%
 	ApplicationDB db = new ApplicationDB();
 	Connection con = db.getConnection();
@@ -23,7 +24,7 @@
 	ResultSet result = null;
 	try {
 
-		out.print("<b>Top Selling Items: </b>");
+		out.print("<b>Best Selling items: </b>");
 
 		String str = "SELECT p.product_id, p.category, p.brand, p.cardcolor, p.boxsize, count(*) FROM auction a, product p WHERE a.status='close' and a.current_bid>=a.min_price and a.product_id=p.product_id group by p.product_id order by count(*) desc limit 5";
 		result = stmt.executeQuery(str);
