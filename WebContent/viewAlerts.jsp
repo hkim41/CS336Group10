@@ -9,7 +9,7 @@
 <title>View Alerts</title>
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return to account page</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to End User Landing Page</button>
 
 <h2> View your alerts</h2>
 <%
