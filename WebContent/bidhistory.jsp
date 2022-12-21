@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>View Bid History</title>
-
+<link rel="stylesheet" 
+	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
 	<button onclick="window.location.href='';">Return to home</button> <!--href location would be the jsp page for the user-->
