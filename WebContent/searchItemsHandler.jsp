@@ -6,11 +6,9 @@
 <html>
 <head>
 <title>Search Products</title>
-<link rel="stylesheet" 
-	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
-	<button onclick="window.location.href='searchProducts.jsp';">Return to search</button>
+	<button onclick="window.location.href='searchItems.jsp';">Return to search</button>
 <h3> These are the list of items based on your keyword</h3>
 	<%
 	try {
@@ -20,13 +18,13 @@
 		String entity = request.getParameter("search");
 		System.out.println(entity);
 		
-		String str = "SELECT * FROM product WHERE category LIKE '%" + entity+ "%' or brand LIKE '%" +entity + "%' or cardcolor LIKE '%" +entity + "%' or boxsize LIKE '%" +entity +  "%'" ;
+		String str = "SELECT * FROM item WHERE category LIKE '%" + entity+ "%' or brand LIKE '%" +entity + "%' or cardcolor LIKE '%" +entity + "%' or boxsize LIKE '%" +entity +  "%'" ;
 		ResultSet rs = stmt.executeQuery(str);
 		
 		out.print("<table>");
 		out.print("<tr>");
 		out.print("<td>");
-		out.print("Product ID");
+		out.print("Item ID");
 		out.print("</td>");
 		out.print("<td>");
 		out.print("Category");
@@ -49,7 +47,7 @@
 
 			out.print("<tr>");
 			out.print("<td>");
-			out.print(rs.getInt("product_id"));
+			out.print(rs.getInt("item_id"));
 			out.print("</td>");
 			out.print("<td>");
 			out.print(rs.getString("category"));
@@ -75,15 +73,15 @@
 			{
 			
 			out.print("<td>");
-			out.print("<form action='createAuction.jsp' method='post'><button name='product_id' type='submit' value='"
-			+ rs.getInt("product_id") + "'>submit auction</button></form>");
+			out.print("<form action='createAuction.jsp' method='post'><button name='item_id' type='submit' value='"
+			+ rs.getInt("item_id") + "'>submit auction</button></form>");
 			out.print("</td>");
 			}
 			
 			else{
 			out.print("<td>");
-			out.print("<form action='createAlertProduct.jsp' method='post'><button name='product_id' type='submit' value='"
-			+ rs.getInt("product_id") + "'> send me an alert </button></form>");
+			out.print("<form action='createAlertItem.jsp' method='post'><button name='item_id' type='submit' value='"
+			+ rs.getInt("item_id") + "'> send me an alert </button></form>");
 			out.print("</td>");
 			}
 			
@@ -97,6 +95,5 @@
 	} catch (Exception e) {
 	}
 	%>
-
 </body>
 </html>
