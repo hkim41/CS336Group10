@@ -59,7 +59,7 @@ UNLOCK TABLES;
 
 INSERT INTO users
 VALUES ('hk345', '336BuyMe','Quahog','switch@fnr.com','Yoon', 'user'), ('adminuser123', '1234', 'State College', 'stf@psu.com','admin', 'admin'),
-('conway1','Torchic','Texax','ben10@e.c','Quan','user');
+('conway1','Torchic','Texas','ben10@e.c','Quan','user'), ('yash1','Yash','NJ','y@y','Yash','user');
 
 --
 -- Table structure for table `customerrep`
