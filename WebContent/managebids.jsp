@@ -7,11 +7,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Manage Bids</title>
-<link rel="stylesheet"
-		href=""> <!--add a css reference here-->
 </head>
 <body>
-	<button onclick="window.location.href='manageAuctionsCustomerRep.jsp';">Return to View All Auctions</button>
+	<button onclick="window.location.href='manageAuctions.jsp';">Return to View All Auctions</button>
 
 <h3> View All Bids</h3>
 <% 
@@ -135,6 +133,5 @@ finally
 	if (stmt != null) stmt.close();
 	if (con != null) con.close();
 }%>
-
 </body>
 </html>
