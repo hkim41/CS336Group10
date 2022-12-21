@@ -19,7 +19,7 @@
 	ResultSet result = null;
 	try {
 		out.print("<b>Earning per End-User: </b>");
-		String str = "SELECT a.seller, sum(a.current_bid) FROM product p, auction a WHERE p.item_id=a.item_id and a.status = 'close' and a.current_bid >= a.min_price group by a.seller";
+		String str = "SELECT a.seller, sum(a.current_bid) FROM item p, auction a WHERE p.item_id=a.item_id and a.status = 'close' and a.current_bid >= a.min_price group by a.seller";
 		result = stmt.executeQuery(str);
 		out.print("<table>");
 		out.print("<tr>");
