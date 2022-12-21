@@ -1,4 +1,4 @@
- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
@@ -7,8 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Earning Per Item Type</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
 	<button onclick="window.location.href='generateSalesReport.jsp';">Return to Generate Sales Report Page</button>
@@ -23,8 +21,7 @@ try
 {
 	
 	out.print("<b>Earning per Item Type: </b>");
-
-	String str = "SELECT p.category, sum(a.current_bid) FROM product p, auction a WHERE p.product_id=a.product_id  and a.status = 'close' and a.current_bid >= a.min_price group by p.category";
+	String str = "SELECT p.category, sum(a.current_bid) FROM item p, auction a WHERE p.item_id=a.item_id  and a.status = 'close' and a.current_bid >= a.min_price group by p.category";
 	result = stmt.executeQuery(str);
 	out.print("<table>");
 	out.print("<tr>");
@@ -50,7 +47,6 @@ try
 	out.print("</table>");	
 	out.print("<br/>");
 	
-
 }		
 catch (Exception e) 
 {
