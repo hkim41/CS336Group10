@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="com.cs336.pkg.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Edit User</title>
-<link rel="stylesheet"
-	href=""> <!--add css reference-->
 </head>
 <body>
 	<%
@@ -23,7 +21,7 @@
 		String newPassword = request.getParameter("newPassword");
 		String username = request.getParameter("username");
 			PreparedStatement update = con
-			.prepareStatement("UPDATE account SET password = ?, email = ?, name = ?  WHERE username = ?");
+			.prepareStatement("UPDATE users SET password = ?, email = ?, name = ?  WHERE username = ?");
 			update.setString(3, newName);
 			update.setString(2, newEmail);
 			update.setString(1, newPassword);
