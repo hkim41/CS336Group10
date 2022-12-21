@@ -9,7 +9,7 @@
 <title>Generate Report</title>
 </head>
 <body>
-	<button onclick="window.location.href='generateSalesReport.jsp';">Return to Generate Sales Report Page</button>
+	<button onclick="window.location.href='generateSalesReports.jsp';">Return to Generate Sales Report Page</button>
 
 	<h2>Total Earnings</h2>
 	<%
