@@ -82,7 +82,7 @@ CREATE TABLE `customerrep` (
 
 LOCK TABLES `customerrep` WRITE;
 /*!40000 ALTER TABLE `customerrep` DISABLE KEYS */;
-INSERT INTO `customerrep` VALUES ('hk345','Conway');
+INSERT INTO `customerrep` VALUES ('hk345','336BuyMe');
 /*!40000 ALTER TABLE `customerrep` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,9 +152,9 @@ DROP TABLE IF EXISTS `item`;
 CREATE TABLE `item` (
   `item_id` int NOT NULL AUTO_INCREMENT,
   `category` varchar(50) DEFAULT NULL,
-  `number_packs` varchar(25) DEFAULT NULL,
-  `set` varchar(20) DEFAULT NULL,
-  `featured_pokemon` varchar(20) DEFAULT NULL,
+  `brand` varchar(25) DEFAULT NULL,
+  `cardcolor` varchar(20) DEFAULT NULL,
+  `boxsize` varchar(20) DEFAULT NULL,
   `seller` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`item_id`),
   KEY `seller` (`seller`),
@@ -168,7 +168,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (10,'Elite Trainer Box','8','Astral Radiance','None','conway1');
+INSERT INTO `item` VALUES (10,'Pokemon Tin','Nintendo','Blue','Small','conway1');
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
