@@ -6,12 +6,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>search the list of items by various criteria</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+<title>Search the list of items by various criteria</title>
 </head>
 <body>
-<button onclick="window.location.href='filterProducts.jsp';">Return to Filter Products Page</button><br>
+<button onclick="window.location.href='filterItems.jsp';">Return to Filter Items Page</button><br>
 	<%
 	ApplicationDB db = new ApplicationDB();
 	Connection con = db.getConnection();
@@ -93,7 +91,7 @@
 			parameters.add(price);
 		}
 		
-		StringBuilder query = new StringBuilder("SELECT * FROM product JOIN auction on product.product_id=auction.product_id WHERE ");
+		StringBuilder query = new StringBuilder("SELECT * FROM item JOIN auction on item.item_id=auction.item_id WHERE ");
 		if (!request.getParameter("category").isEmpty()) {
 		    query.append(" category = ?");
 		}
