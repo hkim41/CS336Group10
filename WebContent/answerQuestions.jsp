@@ -52,8 +52,8 @@
 	<form
 		action="answersHandler.jsp?question_id=<%=result.getInt("question_id")%>"
 		method="POST">
-		<td><textarea type="textarea" name="answer"></textarea> <input
-			type="submit" value="answer"></td>
+		<td><textarea type="textarea" name="answers"></textarea> <input
+			type="submit" value="answers"></td>
 	</form>
 	<%
 	} else {
