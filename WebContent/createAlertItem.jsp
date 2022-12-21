@@ -15,20 +15,19 @@
     Statement stmt = con.createStatement();
     PreparedStatement ps = null;
     ResultSet result = null;
-    int product_id = Integer.parseInt(request.getParameter("product_id"));
+    int item_id = Integer.parseInt(request.getParameter("item_id"));
     String username = (String)session.getAttribute("user");
-    String insert = "INSERT INTO alerts(username, alert_message, product_id)"
+    String insert = "INSERT INTO alerts(username, alert_message, iem_id)"
 					+ "VALUES (?, ?, ?)" ;
 	ps = con.prepareStatement(insert);
 	String message="Alert set for this item"; 
 	ps.setString(1, username);
 	ps.setString(2, message);
-	ps.setInt(3, product_id);
+	ps.setInt(3, item_id);
 	ps.executeUpdate();
 	
 	response.sendRedirect("alertSuccess.jsp");		
 	 %>
 
-	 </body>
-	 </html>
-	 
+</body>
+</html>
