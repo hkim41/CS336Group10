@@ -13,7 +13,8 @@
 <body>
    	<button onclick="window.location.href='account.jsp';">Return</button>
    	<h2> Create a new card</h2>
-	<div class="content">
+	<div class="content"> 
+		
 		<form action="checkCreateWatch.jsp" method="POST">
 			<label for="category">Category</label> <select name="category"
 				id="category" required>
