@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>success</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
-	
+<title>Success</title>
 </head>
 <body>
 <h2>Alert set successfully!</h2>
-<a href="showAllCards.jsp">see watched auctions</a>
+<a href="showAllCards.jsp">See watched auctions</a>
 </body>
 </html>
