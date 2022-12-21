@@ -7,8 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>View Alerts</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
 	<button onclick="window.location.href='account.jsp';">Return to account page</button>
@@ -34,7 +32,7 @@
 		out.print("Alert Message");
 		out.print("</th>");
 		out.print("<th>");
-		out.print("Product ID");
+		out.print("Item ID");
 		out.print("</th>");
 		out.print("<th>");
 		out.print("Auction ID");
@@ -51,7 +49,7 @@
 			out.print("</td>");
 
 			out.print("<td>");
-			out.print(result.getInt("product_id"));
+			out.print(result.getInt("item_id"));
 			out.print("</td>");
 			if(result.getInt("auction_id") == 0)
 			{
@@ -74,6 +72,5 @@
 	} catch (Exception e) {
 	}
 	%>
-	
 </body>
 </html>
