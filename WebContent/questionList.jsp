@@ -43,7 +43,7 @@
 			out.print(result.getInt("question_id"));
 			out.print("</td>");
 			out.print("<td>");
-			out.print(result.getString("question"));
+			out.print(result.getString("user_questions"));
 			out.print("</td>");
 			out.print("<td>");
 			out.print(result.getString("answers"));
