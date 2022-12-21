@@ -11,6 +11,7 @@
 </head>
 <body>
 
+	
 	<button onclick="window.location.href='account.jsp';">Return to account dashboard</button>
 <h3> List of all available Cards.</h3>
 	<%
