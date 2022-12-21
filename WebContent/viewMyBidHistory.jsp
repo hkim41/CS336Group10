@@ -7,8 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>View Bid History</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
 	<button onclick="window.location.href='account.jsp';">Return to account homepage</button>
@@ -22,7 +20,7 @@
 
 	try {
 		
-		String str = "select * from auction join bid using (auction_id) join product using (product_id) where buyer = '" + username + "' order by amount ";
+		String str = "select * from auction join bid using (auction_id) join item using (item_id) where buyer = '" + username + "' order by amount ";
 ;
 		result = stmt.executeQuery(str);
 		
@@ -153,6 +151,5 @@
 			con.close();
 	}
 	%>
-
 </body>
 </html>
