@@ -12,11 +12,11 @@ session.setAttribute("autobid_bool", request.getParameter("autobid_bool"));
 if(request.getParameter("autobid_bool").equals("yes"))
 {
 	
-	response.sendRedirect(""); <!--insert autobid true jsp page-->
+	response.sendRedirect("OnAutoBidTrue.jsp");
 }
 else
 {
-	response.sendRedirect(""); <!-- insert Autobid False jsp page-->
+	response.sendRedirect("OnAutoBidFalse.jsp");
 }
 	%>
 </body>
