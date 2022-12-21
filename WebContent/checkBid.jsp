@@ -7,8 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Bid</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
 	<%
@@ -26,7 +24,6 @@
 		String str = "SELECT max(b.amount) FROM auction a, bid b WHERE b.auction_id=? AND b.auction_id=a.auction_id";
 		ps = con.prepareStatement(str);
 		ps.setInt(1, auction_id);
-		//ps.setString(2, newAuction);
 		result = ps.executeQuery();
 		result.next();
 
@@ -213,21 +210,18 @@
 			}
 		}
 
-		//or set alert here to the loser buyer
 
-		str = "SELECT max(b.amount) FROM auction a, bid b WHERE b.auction_id=? AND b.auction_id=a.auction_id"; //get the max bid for our current auction
+		str = "SELECT max(b.amount) FROM auction a, bid b WHERE b.auction_id=? AND b.auction_id=a.auction_id";
 		ps = con.prepareStatement(str);
 		ps.setInt(1, auction_id);
-		//ps.setString(2, newAuction);
 		result = ps.executeQuery();
 		result.next();
 		current_bid = result.getFloat("max(b.amount)");
 
-		str = "SELECT b.buyer FROM auction a, bid b WHERE b.auction_id=? AND b.auction_id=a.auction_id and b.amount=?"; //get the max bid for our current auction
+		str = "SELECT b.buyer FROM auction a, bid b WHERE b.auction_id=? AND b.auction_id=a.auction_id and b.amount=?";
 		ps = con.prepareStatement(str);
 		ps.setInt(1, auction_id);
 		ps.setFloat(2, current_bid);
-		//ps.setString(2, newAuction);
 		result = ps.executeQuery();
 		result.next();
 		String name = result.getString("buyer");
@@ -237,7 +231,6 @@
 		ps.setInt(3, auction_id);
 		ps.setString(2, name);
 		ps.setFloat(1, current_bid);
-		//ps.setString(2, newAuction);
 		ps.executeUpdate();
 		result.next();
 
