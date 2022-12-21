@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>check autobid is off</title>
+<title>Check autobid is off</title>
 
 </head>
 <body>
-	<button onclick="window.location.href='sortAuctions.jsp';">Return to Auctions Page</button> <!--add a reference to jsp page for auction sort in href=''-->
+	<button onclick="window.location.href='sortAuctions.jsp';">Return to Auctions Page</button>
 
    <form action="checkBid.jsp" method="POST">	
 	<table>
