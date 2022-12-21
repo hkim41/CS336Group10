@@ -5,37 +5,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>View Bid History</title>
+<meta charset="ISO-8859-1">
+<title>My Auctions</title>
 <link rel="stylesheet"
-		href=""> <!--add a css reference here-->
+		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
-	<button onclick="window.location.href='';">Return to home</button> <!--href location would be the jsp page for the user-->
-<h2>My bid history</h2>
+	<button onclick="window.location.href='account.jsp';">Return to Homepage</button>
+<h3> List of auctions started by me!</h3>
 	<%
 	ApplicationDB db = new ApplicationDB();
 	Connection con = db.getConnection();
 	Statement stmt = con.createStatement();
+	String seller = session.getAttribute("user").toString();
 	ResultSet result = null;
-	String username = session.getAttribute("user").toString();
-
 	try {
-		
-		String str = "select * from auction join bid using (auction_id) join product using (product_id) where buyer = '" + username + "' order by amount "; <!--added product id as a filler. We need to make a schema with product ID-->
-;
-		result = stmt.executeQuery(str);
-		
+		String str = "select * from auction a join product using (product_id) where a.seller = ? order by (auction_id) ";
+		PreparedStatement ps = con.prepareStatement(str);
+		ps.setString(1, seller);
+		result = ps.executeQuery();
+			
 		out.print("<table>");
-
 		out.print("<tr>");
-
 		out.print("<th>");
-		out.print("Auction ID");
-		out.print("</th>");
-		
-		out.print("<th>");
-		out.print("Bid ID");
+		out.print("Auction ID ");
 		out.print("</th>");
 		out.print("<th>");
 		out.print("Category");
@@ -49,100 +42,108 @@
 		out.print("<th>");
 		out.print("Box Size");
 		out.print("</th>");
-		
+
 		out.print("<th>");
-		out.print("Bid Amount");
+		out.print("Current Bid");
 		out.print("</th>");
 		
 		out.print("<th>");
-		out.print("Auto Bid: On or Off?");
-		out.print("</th>");
-		
-		out.print("<th>");
-		out.print("Bid Increment");
-		out.print("</th>");
-		
-		out.print("<th>");
-		out.print("Upper Limit");
-		out.print("</th>");
-		
-		out.print("<th>");
-		out.print("Status of Auction");
+		out.print("Minimum Price");
 		out.print("</th>");
 
+		out.print("<th>");
+		out.print("Price");
+		out.print("</th>");
+		
+		out.print("<th>");
+		out.print("New Bid Increment");
+		out.print("</th>");
+
+		out.print("<th>");
+		out.print("End Time");
+		out.print("</th>");
+		
+		out.print("<th>");
+		out.print("Winner");
+		out.print("</th>");
+		
+		out.print("<th>");
+		out.print("Status");
+		out.print("</th>");
+	
+	
 		while (result.next()) {
-			out.print("<tr>");
+			String status1 = result.getString("status");
 
+			out.print("<tr>");
 			out.print("<td>");
 			out.print(result.getInt("auction_id"));
 			out.print("</td>");
-			
-			out.print("<td>");
-			out.print(result.getInt("bid_id"));
-			out.print("</td>");
-			
+
 			out.print("<td>");
 			out.print(result.getString("category"));
 			out.print("</td>");
-			
+
 			out.print("<td>");
 			out.print(result.getString("brand"));
 			out.print("</td>");
-			
+
 			out.print("<td>");
 			out.print(result.getString("cardcolor"));
 			out.print("</td>");
-			
+
 			out.print("<td>");
 			out.print(result.getString("boxsize"));
 			out.print("</td>");
 			
+
 			out.print("<td>");
-			out.print(result.getFloat("amount"));
+			out.print(result.getFloat("current_bid"));
+			out.print("</td>");
+
+			out.print("<td>");
+			out.print(result.getFloat("min_price"));
+			out.print("</td>"); 
+			
+			out.print("<td>");
+			out.print("$" + result.getFloat("price"));
 			out.print("</td>");
 			
 			out.print("<td>");
-			out.print(result.getBoolean("is_autobid"));
+			out.print("$" + result.getFloat("new_bid_increment"));
 			out.print("</td>");
-			
-			if(result.getFloat("bid_increment") == -1)
-			{
-				out.print("<td>");
-				out.print("no bid increment since auto bid is not on");
-				out.print("</td>");
+
+			out.print("<td>");
+			out.print(result.getTimestamp("end_date"));
+			out.print("</td>");
+
+		
+			if (status1.equals("close")) {
+		out.print("<td>");
+		out.print(result.getString("winner"));
+		out.print("</td>");
 			}
 			else
 			{
 				out.print("<td>");
-				out.print(result.getFloat("bid_increment"));
+				out.print(" ");
 				out.print("</td>");
 			}
-			
-			if(result.getFloat("upper_limit") == -1)
-			{
-				out.print("<td>");
-				out.print("no upper limit since auto bid is not on");
-				out.print("</td>");
-			}
-			else
-			{
-				out.print("<td>");
-				out.print(result.getFloat("upper_limit"));
-				out.print("</td>");
-			}
-			
+
 			out.print("<td>");
 			out.print(result.getString("status"));
 			out.print("</td>");
+			
+			out.print("<td>");
+			out.print("<form action='bidHistory.jsp' method='post'><button name='auction_id' type='submit' value='"
+			+ result.getInt("auction_id") + "'> View Bid History </button></form>");
+			out.print("</td>");
+
 
 			out.print("</tr>");
 		}
-
 		out.print("</table>");
-
-	}
-
-	catch (Exception e) {
+	} catch (Exception e) {
 		out.print(e);
 	} finally {
 		if (result != null)
@@ -154,5 +155,10 @@
 	}
 	%>
 
+
+
+
+
 </body>
 </html>
+

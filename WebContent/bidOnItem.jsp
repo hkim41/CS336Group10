@@ -11,9 +11,9 @@
 		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
-	<button onclick="window.location.href='sortAuctions.jsp';">Return Auctions Page </button>
+	<button onclick="window.location.href='sortAuctions.jsp';">Return to Auctions</button>
 
-<h2> Bid on this Item!</h2>
+<h2> Place bid</h2>
 	<%
 	int auctionID = Integer.parseInt(request.getParameter("auction_id"));
 	session.setAttribute("auction_id", auctionID);
@@ -23,7 +23,7 @@
 	out.print("<table>");
 
 	out.print("<tr>");
-	out.print("<td>The entries are required if '**' is present</td>");
+	out.print("<td> '**' needs an entry</td>");
 	out.print("</tr>");
 
 	out.print("<tr>");
@@ -42,7 +42,7 @@
 	
 
 	out.print("</table>");
-	out.print("<input type='submit' value='Submit Bid!'>");
+	out.print("<input type='submit' value='submit'>");
 	out.print("</form>");
 	%>
 </body>

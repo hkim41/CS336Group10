@@ -11,28 +11,28 @@
 		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>  
-	<button onclick="window.location.href='enduserlanding.jsp';">Return to Homepage</button>
+	<button onclick="window.location.href='account.jsp';">Return to home</button>
 
-<h3> Start an Auction</h3>
+<h3>New Auction</h3>
 	<div class="content">
 		<form action="checkCreateAuction.jsp" method="POST">	
 	<table>
 	 <tr> 
 	 <td>
-	<input type="hidden" name="item_id" value = <%=request.getParameter("item_id")%>>
+	<input type="hidden" name="product_id" value = <%=request.getParameter("product_id")%>>
 	</td>
 	</tr> 
 	<tr>    
-	<td>End Date: <br><p>Enter the end date of the auction in the specified format (yyyy-MM-dd hh:mm:ss)</p> </td><td><input type="text" name="end_datetime" id="end_datetime" placeholder="yyyy-MM-dd hh:mm:ss" required></td>
+	<td>End Date and Time: <br><p>Enter the auction end date in yyyy-MM-dd hh:mm:ss</p> </td><td><input type="text" name="end_datetime" id="end_datetime" placeholder="yyyy-MM-dd hh:mm:ss" required></td>
 	</tr> 
 	<tr>    
-	<td>Secret Minimum Price: <br><p>Enter the minimum price that you want to sell this item for</p><br> <p>Minimum Price has to be greater than 0 </p> </td><td><input type="number" name="min_price" placeholder="0" required></td>
+	<td>Set Minimum Price: <br><p>Enter the minimum price of the auction</p><br> <p>price must be larger than 0 </p> </td><td><input type="number" name="min_price" placeholder="0" required></td>
 	</tr>	
 	<tr>    
-	<td>Initial Starting Price: <br><p>Enter the starting price of this auction</p><br> <p> Note: Starting Price has to be less than the minimum price </p> </td><td><input type="number" name="starting_price" placeholder="0" required></td>
+	<td>Set Starting Price: <br><p>Enter the starting price of the auction</p><br> <p>starting price must be less than the minimum price </p> </td><td><input type="number" name="starting_price" placeholder="0" required></td>
 	</tr>	
 	<tr>    
-	<td>New Bid Increment: <br><p>Enter the Bid Increment for the next valid bid</p> </td><td><input type="number" name="new_bid_increment" placeholder="0" required></td>
+	<td>Set Bid Increment: <br><p>Enter the Bid Increment for the next valid bid</p> </td><td><input type="number" name="new_bid_increment" placeholder="0" required></td>
 	</tr>	
 	</table>
 	<input type="submit" value="Create Auction">

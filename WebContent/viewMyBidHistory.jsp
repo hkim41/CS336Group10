@@ -8,11 +8,11 @@
 <meta charset="UTF-8">
 <title>View Bid History</title>
 <link rel="stylesheet"
-		href=""> <!--add a css reference here-->
+		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
-	<button onclick="window.location.href='';">Return to home</button> <!--href location would be the jsp page for the user-->
-<h2>My bid history</h2>
+	<button onclick="window.location.href='account.jsp';">Return to account homepage</button>
+<h2>View My Bid History and all the auctions I have participated In</h2>
 	<%
 	ApplicationDB db = new ApplicationDB();
 	Connection con = db.getConnection();
@@ -22,7 +22,7 @@
 
 	try {
 		
-		String str = "select * from auction join bid using (auction_id) join product using (product_id) where buyer = '" + username + "' order by amount "; <!--added product id as a filler. We need to make a schema with product ID-->
+		String str = "select * from auction join bid using (auction_id) join product using (product_id) where buyer = '" + username + "' order by amount ";
 ;
 		result = stmt.executeQuery(str);
 		

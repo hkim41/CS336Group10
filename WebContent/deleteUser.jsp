@@ -1,7 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +47,7 @@ while(result.next())
 	}
 	else
 		{
-	str = "SELECT buyer from bid join auction using (auction_id) where amount = ? and auction_id = ?";
+	str = "SELECT buyer from bid join auction using (auction_id) where amount = ? and auction_id = ?"; //get the max bid for our current auction
 	ps = con.prepareStatement(str);
 	ps.setFloat(1, current_bid);
 	ps.setInt(2, auction_id);
@@ -82,7 +83,7 @@ while(result.next())
 	ps1.executeUpdate();
 	
 }
-int res = st.executeUpdate("DELETE FROM users WHERE username='" + user + "'");
+int res = st.executeUpdate("DELETE FROM account WHERE username='" + user + "'");
 if (res > 0) {
 	out.println("User deleted.");
 	out.println("<form action='manageUsers.jsp'><input type='submit' value='Go Back to Manage Users Page'/></form>");

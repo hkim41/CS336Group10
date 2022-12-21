@@ -17,7 +17,7 @@
 <% 
 ApplicationDB db = new ApplicationDB();
 Connection con = db.getConnection();
-Statement statementS = con.createStatement();
+Statement statement = con.createStatement();
 ResultSet result = null;
 PreparedStatement statement = null;
 int auction_id = Integer.parseInt(request.getParameter("auction_id"));
