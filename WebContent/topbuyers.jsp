@@ -8,8 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Top Buyers</title>
-<link rel="stylesheet"
-		href=""> <!--add a css reference here-->
+<link rel="stylesheet" 
+	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
 	<button onclick="window.location.href='';">Return to sales reports</button> <!--add a reference to generate sales report .jsp at href='';-->
