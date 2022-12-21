@@ -7,8 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Earning Per Item</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 </head>
 <body>
 	<button onclick="window.location.href='generateSalesReport.jsp';">Return to Generate Sales Report Page</button>
@@ -22,14 +20,13 @@ ResultSet result = null;
 try 
 {
 	out.print("<b>Earning per Item: </b>");
-
-	String str = "SELECT p.product_id, p.brand, p.category, p.cardcolor, p.boxsize, sum(a.current_bid) FROM product p, auction a WHERE p.product_id=a.product_id and a.status = 'close' and a.current_bid >= a.min_price group by p.brand, p.category, p.boxsize, p.cardcolor";
+	String str = "SELECT p.item_id, p.brand, p.category, p.cardcolor, p.boxsize, sum(a.current_bid) FROM item p, auction a WHERE p.item_id=a.item_id and a.status = 'close' and a.current_bid >= a.min_price group by p.brand, p.category, p.boxsize, p.cardcolor";
 	
 	result = stmt.executeQuery(str);
 	out.print("<table>");
 	out.print("<tr>");
 	out.print("<th>");
-	out.print("Product ID");
+	out.print("Item ID");
 	out.print("</th>");
 	out.print("<th>");
 	out.print("Category");
@@ -52,7 +49,7 @@ try
 	while (result.next()) 
 	{	
 		out.print("<td>");
-		out.print(result.getInt("product_id"));
+		out.print(result.getInt("item_id"));
 		out.print("</td>");
 		
 		out.print("<td>");
@@ -66,7 +63,6 @@ try
 		out.print("<td>");
 		out.print(result.getString("cardcolor"));
 		out.print("</td>");
-
 		out.print("<td>");
 		out.print(result.getString("boxsize"));
 		out.print("</td>");
