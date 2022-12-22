@@ -35,7 +35,8 @@
 		str = "INSERT INTO alerts(username, alert_message, item_id, auction_id)" + "VALUES(?, ?, ?, ?)";
 		ps = con.prepareStatement(str);
 		ps.setString(1, result.getString("winner"));
-		ps.setString(2, "Dear " +result.getString("winner")+ ", you have won the auction! Please keep the payment of amount $" + result.getString("current_bid")+ " ready :)");
+		ps.setString(2, "Dear " +result.getString("winner")+ ", you have won the auction! Please keep the payment of amount $" + 
+			result.getString("current_bid")+ " ready or we will bust your kneecaps");
 		ps.setInt(3, result.getInt("item_id"));
 		ps.setInt(4, result.getInt("auction_id"));
 		ps.executeUpdate();
