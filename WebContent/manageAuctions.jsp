@@ -132,7 +132,7 @@
 			+ result.getInt("auction_id") + "'>Remove Auction</button></form>");
 			out.print("</td>");
 			out.print("<td>");
-			out.print("<form action='manageBids.jsp' method='post'><button name='auction_id' type='submit' value='"
+			out.print("<form action='managebids.jsp' method='post'><button name='auction_id' type='submit' value='"
 			+ result.getInt("auction_id") + "'>View Bids</button></form>");
 			out.print("</td>");
 			out.print("</tr>");
