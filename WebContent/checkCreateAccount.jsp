@@ -7,10 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Check Account Creation Details</title>
-<link rel="stylesheet" 
-	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
+<jsp:include page="checkWinner.jsp" />
 	<%
 	String userid = request.getParameter("username");
 	String pwd = request.getParameter("password");
