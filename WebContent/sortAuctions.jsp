@@ -136,7 +136,7 @@
 			}
 
 			out.print("<td>");
-			out.print("<form action='bidhistory.jsp' method='post'><button name='auction_id' type='submit' value='"
+			out.print("<form action='bidHistory.jsp' method='post'><button name='auction_id' type='submit' value='"
 			+ result.getInt("auction_id") + "'> View Bid History </button></form>");
 			out.print("</td>");
 
