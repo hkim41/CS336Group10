@@ -7,6 +7,8 @@
 <title>Generate sales reports</title>
 </head>
 <body>
+	<button onclick="window.location.href='adminlanding.jsp';">Return to admin landing</button>
+	
 <li> <a href="totalEarnings.jsp">Total earnings</a> </li>
 <li> <a href="earningPerItem.jsp">Earnings per Item</a> </li>
 <li> <a href="earningPerItemType.jsp">Earnings per Item Type</a> </li>
