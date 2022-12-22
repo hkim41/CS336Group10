@@ -77,17 +77,14 @@
 		if ((newBid <= current_bid) || newBid < initialPrice) {
 			throw new Exception(
 			"You can't bid lower than the initial price or the previous highest bid! Your bid amount is:" + newBid
-					+ " , whereas the current winning bid is:" + current_bid + " , and the seller minimum is:"
+					+ " , the current winning bid is:" + current_bid + " , and the seller minimum is:"
 					+ initialPrice);
 		}
 
-		//Make an insert statement for the Users table:
 		String insert = "INSERT INTO bid(buyer, upper_limit, is_autobid, bid_increment, amount, auction_id)"
 		+ "VALUES (?, ?, ?, ?, ?, ?)";
-		//Create a Prepared SQL statement allowing you to introduce the parameters of the query
 		ps3 = con.prepareStatement(insert);
 
-		//Add parameters of the query. Start with 1, the 0-parameter is the INSERT statement itself
 		ps3.setString(1, newUser);
 		ps3.setFloat(2, max_bid);
 		ps3.setBoolean(3, auto_bool);
@@ -97,7 +94,6 @@
 		//Run the query against the DB
 		ps3.executeUpdate();
 
-		//System.out.println("Check 0");
 
 		if (current_bid != 0) {
 
@@ -111,7 +107,7 @@
 
 			String previous_user = result2.getString("buyer");
 			int previous_bid_id = result2.getInt("bid_id");
-			String product_id = result2.getString("product_id");
+			String item_id = result2.getString("item_id");
 
 			str3 = "SELECT b.bid_id FROM bid b, auction a WHERE b.amount=? and a.auction_id=?";
 
@@ -131,7 +127,6 @@
 			int temp2;
 
 			if (previous_bid_id != 0) {
-		//System.out.println("Check 1");
 		if (!(previous_user.equals(newUser))) {
 			//System.out.println("Check 2");
 			while (true) {
@@ -148,7 +143,6 @@
 				previous_auto_max = result2.getFloat("upper_limit");
 
 				if (previous_auto_bid) {
-					//System.out.println("Check 4");
 					if (newBid + previous_auto_increment > previous_auto_max) {
 						if (previous_auto_max - newBid < new_bid_increment) {
 							break;
@@ -177,7 +171,6 @@
 					current_bid_id = result.getInt(1);
 					
 					temp = newUser;
-					//This project is so complicated :(
 					newUser = previous_user;
 					previous_user = temp;
 
@@ -189,7 +182,6 @@
 
 					auto_bool = true;
 
-					//System.out.println("Check 5");
 				} else {
 					break;
 					///Set the alert for buyer who has higher bid has been placed
@@ -197,12 +189,12 @@
 			}
 
 			//
-			str3 = "INSERT INTO alerts(username, alert_message, product_id, auction_id)" + "VALUES(?, ?, ?, ?)";
+			str3 = "INSERT INTO alerts(username, alert_message, item_id, auction_id)" + "VALUES(?, ?, ?, ?)";
 			ps3 = con.prepareStatement(str3);
 			ps3.setString(1, previous_user);
 			ps3.setString(2, "You have been outbidded by " + newUser + ", who has currently bidded $" + newBid
 					+ ". Bid now to get the item!");
-			ps3.setString(3, product_id);
+			ps3.setString(3, item_id);
 			ps3.setInt(4, auction_id);
 
 			ps3.executeUpdate();
@@ -247,7 +239,5 @@
 			con.close();
 	}
 	%>
-
-
 </body>
 </html>
