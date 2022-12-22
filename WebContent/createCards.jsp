@@ -9,7 +9,7 @@
 <title>Create Card</title>
 </head>
 <body>
-   	<button onclick="window.location.href='account.jsp';">Return</button>
+   	<button onclick="window.location.href='enduserlanding.jsp';">Return to landing</button>
    	<h2> Create a new card</h2>
 	<div class="content"> 
 		
