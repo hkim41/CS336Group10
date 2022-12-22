@@ -35,7 +35,7 @@ try {
 	} else {
 		rs = ps.getGeneratedKeys();
 		rs.next();
-		int product_id = rs.getInt(1);
+		int item_id = rs.getInt(1);
 		response.sendRedirect("showAllCards.jsp");
 		return;
 	}
