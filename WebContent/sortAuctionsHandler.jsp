@@ -52,7 +52,7 @@
 			} else if (checked.equals("Sort by End Time")) {
 				str = "select * from auction join item using (item_id) where status = 'open' order by (end_date);";
 			} else if (checked.equals("Sort by Box Size")) {
-				str = "select * from auction join item using (item_id) where status = 'open' order by (Box Size);";
+				str = "select * from auction join item using (item_id) where status = 'open' order by (boxSize);";
 			} else if (checked.equals("Sort by Price")) {
 				str = "select * from auction join item using (item_id) where status = 'open' order by (price);";
 			} else if (checked.equals("Sort by Category")) {
@@ -135,7 +135,7 @@
 				out.print("</td>");
 
 				out.print("<td>");
-				out.print(result.getString("card color"));
+				out.print(result.getString("cardcolor"));
 				out.print("</td>");
 
 				out.print("<td>");
@@ -193,6 +193,5 @@
 				con.close();
 		}
 	%>
-
 </body>
 </html>
