@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
-<%@ page
-	import="javax.servlet.http.*,javax.servlet.*, java.text.SimpleDateFormat"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*, java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +43,7 @@
 		rs = ps.getGeneratedKeys();
 		rs.next();
 		int auction_id = rs.getInt(1);
-		String query = "select * from alerts where product_id = ?";
+		String query = "select * from alerts where item_id = ?";
 		PreparedStatement ps2 = conn.prepareStatement(query);
 		ps2.setInt(1, item_id);
 		ResultSet result2 = ps2.executeQuery();
