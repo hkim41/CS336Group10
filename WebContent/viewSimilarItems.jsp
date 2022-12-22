@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>View Similar Items</title>.css">
+<title>View Similar Items</title>
 <body>
 	<button onclick="window.location.href='sortAuctions.jsp';">Return to Auctions Page</button>
 <h2>View Similar Items</h2>
