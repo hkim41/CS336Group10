@@ -60,7 +60,8 @@ UNLOCK TABLES;
 
 INSERT INTO users
 VALUES ('hk345', '336BuyMe','Quahog','switch@fnr.com','Yoon', 'user'), ('adminuser123', '1234', 'State College', 'stf@psu.com','admin', 'admin'),
-('conway1','Torchic','Texas','ben10@e.c','Quan','user'), ('yash1','Yash','NJ','y@y','Yash','user');
+('conway1','Torchic','Texas','ben10@e.c','Quan','user'), ('yash1','Yash','NJ','y@y','Yash','user'), ('yebin1','Yebin','NJ','y2@y','Yebin','user'),
+('nicky13','Nick','PA','nick@n','Nick','user');
 
 --
 -- Table structure for table `customerrep`
@@ -139,7 +140,7 @@ CREATE TABLE `questions` (
 
 LOCK TABLES `questions` WRITE;
 /*!40000 ALTER TABLE `questions` DISABLE KEYS */;
-INSERT INTO `questions` VALUES (1,'conway1','hk345','How can I start a bid?','like this'),(2,'conway1','hk345','How can I start a bid?','Customer rep hasnt answered yet');
+INSERT INTO `questions` VALUES (1,'conway1','hk345','How can I start a bid?','like this'),(2,'conway1','hk345','How can I see auctions?','Customer rep hasnt answered yet');
 /*!40000 ALTER TABLE `questions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,7 +170,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (10,'Pokemon Tin','Nintendo','Blue','Small','conway1');
+INSERT INTO `item` VALUES (10,'Pokemon Tin','Nintendo','Blue','Small','conway1'), (25,'Baseball Cards','MLB','Gray','Medium','yash1');
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
