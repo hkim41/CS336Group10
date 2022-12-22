@@ -91,7 +91,7 @@
 		ps3.setFloat(4, auto_increment);
 		ps3.setFloat(5, newBid);
 		ps3.setInt(6, auction_id);
-		//Run the query against the DB
+
 		ps3.executeUpdate();
 
 
@@ -128,9 +128,9 @@
 
 			if (previous_bid_id != 0) {
 		if (!(previous_user.equals(newUser))) {
-			//System.out.println("Check 2");
+
 			while (true) {
-				//System.out.println("Check 3");
+
 				i++;
 				str3 = "SELECT * FROM bid b WHERE b.bid_id = ?";
 				ps4 = con.prepareStatement(str3);
@@ -184,11 +184,11 @@
 
 				} else {
 					break;
-					///Set the alert for buyer who has higher bid has been placed
+					
 				}
 			}
 
-			//
+			
 			str3 = "INSERT INTO alerts(username, alert_message, item_id, auction_id)" + "VALUES(?, ?, ?, ?)";
 			ps3 = con.prepareStatement(str3);
 			ps3.setString(1, previous_user);
