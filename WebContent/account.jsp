@@ -9,7 +9,7 @@
 <body>
 	<button onclick="window.location.href='enduserlanding.jsp';">Return to landing</button>
 	<h1>Welcome user. What action would you like to do today</h1>
-	<li> <a>Delete account</a> </li>
+	<li> <a href="deleteAccount.jsp">Delete account</a> </li>
 	<li> <a href="logout.jsp">Logout</a> </li>
 
 </body>
