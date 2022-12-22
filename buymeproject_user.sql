@@ -143,7 +143,7 @@ INSERT INTO `questions` VALUES (1,'conway1','hk345','How can I start a bid?','li
 UNLOCK TABLES;
 
 --
--- Table structure for table `product`
+-- Table structure for table `item`
 --
 
 DROP TABLE IF EXISTS `item`;
