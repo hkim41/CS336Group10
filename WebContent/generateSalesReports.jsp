@@ -15,6 +15,5 @@
 <li> <a href="earningPerUser.jsp">Earnings by user</a> </li>
 <li> <a href="bestitems.jsp">Best Selling Items</a> </li>
 <li> <a href="topbuyers.jsp">Best Buyers</a> </li>
-<li> <a href="logout.jsp">Logout</a> </li>
 </body>
 </html>
