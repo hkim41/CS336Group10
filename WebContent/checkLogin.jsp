@@ -9,6 +9,7 @@
 <title>Check Login Details</title>
 </head>
 <body>
+<jsp:include page="checkWinner.jsp" />
 <%
 	String userid = request.getParameter("uname");   
 	String pwd = request.getParameter("upass");
