@@ -17,7 +17,7 @@
     ResultSet result = null;
     int item_id = Integer.parseInt(request.getParameter("item_id"));
     String username = (String)session.getAttribute("user");
-    String insert = "INSERT INTO alerts(username, alert_message, iem_id)"
+    String insert = "INSERT INTO alerts(username, alert_message, item_id)"
 					+ "VALUES (?, ?, ?)" ;
 	ps = con.prepareStatement(insert);
 	String message="Alert set for this item"; 
