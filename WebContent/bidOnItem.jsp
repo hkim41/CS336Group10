@@ -18,7 +18,7 @@
 	out.print("<form method='post' action='checkAutoBid.jsp'>");
 	out.print("<table>");
 	out.print("<tr>");
-	out.print("<td>The entries are required if '**' is present</td>");
+	out.print("<td>The entries marked with '**' are required</td>");
 	out.print("</tr>");
 	out.print("<tr>");
 	out.print("<td><label for='autobid_bool'>**Set Autobidding?</label>");
