@@ -10,9 +10,12 @@ Demo Video:
 Credentials:
 end users
 user: hk345 password: 336BuyMe
+user: conway1 password: Torchic
+user: yash1 password: Yash
+user: yebin1 password: Yebin
 
 customer rep
-user: hk345 password: Conway
+user: hk345 password: 336BuyMe
 
 admin
 user: adminuser123 password: 1234
@@ -20,9 +23,9 @@ user: adminuser123 password: 1234
 put your database password in ApplicationDB.java
 
 Contributions:
-Hayoon Kim: User login/logout, account creation, landing pages, user schemas
-Conway Zhou: Video script
-Yash Puranik: Auction schemas
-Yebin Kim: Auction schemas
+Hayoon Kim: User login/logout, account creation, landing pages, user schemas, questions handling
+Conway Zhou: Alert pages, Alert schemas, Video, Design
+Yash Puranik: Bid/Auction schemas, Bid/Auction pages, sales reports
+Yebin Kim: Bid/Auction schemas, Bid/Auction pages
 
 Assumptions:
