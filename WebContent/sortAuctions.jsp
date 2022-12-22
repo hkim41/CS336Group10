@@ -9,8 +9,7 @@
 <title>Sort Auctions</title>
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return
-		to account page</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to landing</button>
 	<h2>List of all open auctions.</h2>
 	<p>Sort by different parameters available</p>
 	<p>Bid on item or view bid history for that auction</p>
