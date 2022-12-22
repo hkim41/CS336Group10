@@ -11,6 +11,7 @@
 <ul>
 <li> <a href="manageCustomerReps.jsp">Manage Customer Representatives</a> </li>
 <li> <a href="generateSalesReports.jsp">Generate Sales Reports</a></li>
+<li> <a href="logout.jsp">Logout</a> </li>
 </ul>
 </body>
 </html>
