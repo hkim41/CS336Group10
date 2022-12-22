@@ -5,9 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>View Similar Items</title>
-<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+<title>View Similar Items</title>.css">
 <body>
 	<button onclick="window.location.href='sortAuctions.jsp';">Return to Auctions Page</button>
 <h2>View Similar Items</h2>
