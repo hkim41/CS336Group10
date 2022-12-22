@@ -9,6 +9,7 @@
 <title>Check Customer Rep Login</title>
 </head>
 <body>
+<jsp:include page="checkWinner.jsp" />
 <%
 	String userid = request.getParameter("uname");   
 	String pwd = request.getParameter("upass");
@@ -22,7 +23,7 @@
     	 ResultSet rs1;
     	    rs1 = stmt.executeQuery("select * from customerrep where username='" + userid + "' and password='" + pwd + "'");
     	    	if (rs1.next()) {
-    	    		session.setAttribute("user", userid);
+    	    		session.setAttribute("customerrep_username", userid);
         	        response.sendRedirect("customerRepresentativeLanding.jsp");
         	        out.println("welcome " + userid);
         	        out.println("<a href='logout.jsp'>Log out</a>");
