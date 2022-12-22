@@ -10,11 +10,11 @@
 	
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return to Homepage</button><br>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to landing</button><br>
 
-	<b> search items</b>
+	<b>Search items</b>
 	<br><b> items in the * are needed </b><br><br>
-	<form method="post" action="filterProductsHandler.jsp">
+	<form method="post" action="filterItemsHandler.jsp">
 	<label for="category">*Category</label> <select name="category"
 				id="category" required>
 				<option value="" disabled selected hidden="true">select
