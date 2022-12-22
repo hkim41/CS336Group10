@@ -5,10 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Account Page</title>
-<link rel="stylesheet" 
-	href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"><!--https://www.jsdelivr.com/package/npm/water.css-->
 </head>
 <body>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to landing</button>
 	<h1>Welcome user. What action would you like to do today</h1>
 	<li> <a>Delete account</a> </li>
 	<li> <a href="logout.jsp">Logout</a> </li>
