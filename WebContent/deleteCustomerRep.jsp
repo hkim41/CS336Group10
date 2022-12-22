@@ -9,7 +9,7 @@
 <title>Delete Customer Representatives</title>
 </head>
 <body>
-	<a href="adminlanding.jsp">Return to Homepage</a>
+	<button onclick="window.location.href='adminlanding.jsp';">Return to Admin landing</button>
 	<h3>Manage Customer Representative Accounts</h3>
 	<form>
 		<input type="text" name="search" placeholder="username">
