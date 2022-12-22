@@ -57,10 +57,10 @@
 			out.print(result.getString("brand"));
 			out.print("</td>");
 			out.print("<td>");
-			out.print(result.getString("card color"));
+			out.print(result.getString("cardcolor"));
 			out.print("</td>");
 			out.print("<td>");
-			out.print(result.getString("box size"));
+			out.print(result.getString("boxsize"));
 			out.print("</td>");
 			
 			out.print("<td>");
