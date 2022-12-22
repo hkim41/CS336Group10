@@ -65,7 +65,7 @@
 		%>
 		<h2>Error: Failed to create auction.</h2>
 		<p>
-			Minimum Bid Price must be greater than 0 <br>
+			Please make sure: Minimum Bid Price must be greater than 0 <br>
 		</p>
 		<a href="createAuction.jsp">Click here to try again.</a>
 		<%
