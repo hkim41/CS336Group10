@@ -8,7 +8,7 @@
 <title>View Auctions By Users</title>
 </head>
 <body>
-	<a href="enduserlanding.jsp">Return to End user landing</a>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to landing</button>
 	<h3>View Auctions By Users</h3>
 	<form>
 		<input type="text" name="search" placeholder="username">
