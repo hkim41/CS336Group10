@@ -33,7 +33,7 @@
 		Enter New Name: <input type="text" name="newName"><br>
 		Previous Email: <input type="text" disabled name="oldEmail" value = <%=email%>>
 		Enter New Email: <input type="text" name="newEmail"> <br />  
-		Enter New Password: <input type="text" name="newPassword">
+		Enter New Password (or the old one if none): <input type="text" name="newPassword" required>
 		<input type="hidden" name="username" value=<%=username%>>
 		<input
 			type="submit" value="Save Changes">
