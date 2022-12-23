@@ -114,7 +114,7 @@ try
 		if(status.equals("open"))
 		{
 		out.print("<td>");
-		out.print("<form action='removeBids.jsp' method='post'><button name='bid_id' type='submit' value='" + result.getInt("bid_id") + "'>Remove Bid</button></form>");
+		out.print("<form action='removeBid.jsp' method='post'><button name='bid_id' type='submit' value='" + result.getInt("bid_id") + "'>Remove Bid</button></form>");
 		out.print("</td>");
 		}
 		out.print("</tr>");
