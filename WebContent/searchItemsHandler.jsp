@@ -16,7 +16,6 @@
 		Connection con = db.getConnection();
 		Statement stmt = con.createStatement();
 		String entity = request.getParameter("search");
-		System.out.println(entity);
 		
 		String str = "SELECT * FROM item WHERE category LIKE '%" + entity+ "%' or brand LIKE '%" +entity + "%' or cardcolor LIKE '%" +entity + "%' or boxsize LIKE '%" +entity +  "%'" ;
 		ResultSet rs = stmt.executeQuery(str);
@@ -74,7 +73,7 @@
 			
 			out.print("<td>");
 			out.print("<form action='createAuction.jsp' method='post'><button name='item_id' type='submit' value='"
-			+ rs.getInt("item_id") + "'>submit auction</button></form>");
+			+ rs.getInt("item_id") + "'>Create auction</button></form>");
 			out.print("</td>");
 			}
 			
