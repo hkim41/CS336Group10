@@ -19,6 +19,8 @@
 				<option value="" disabled selected hidden="true">Select
 					category</option>
 				<option value="Trading Cards">Trading Cards</option>
+				<option value="Trading Card Boxes">Trading Card Boxes</option>
+				<option value="Trading Card Packs">Trading Card Packs</option>
 			</select> <br>
 			<table>
 				<tr>
