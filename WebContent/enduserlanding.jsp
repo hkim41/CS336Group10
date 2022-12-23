@@ -13,6 +13,7 @@
 <li> <a href="myAuctions.jsp">See my auctions</a> </li>
 <li> <a href="sortAuctions.jsp">See current auctions</a> </li>
 <li> <a href="viewAlerts.jsp">View alerts</a> </li>
+<li> <a href="searchItems.jsp">Search items</a> </li>
 <li> <a href="showAllCards.jsp">See all items</a></li>
 <li> <a href="viewMyBidHistory.jsp">View bid history</a> </li>
 <li> <a href="questionForm.jsp">Questions page</a> </li>
