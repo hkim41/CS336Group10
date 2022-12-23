@@ -1,11 +1,9 @@
-Group 10 BuyMe Auction System Project
+Group 10 Buyme Auction System Project
 CS 336 Rutgers University Fall 2022
 
 Collaborators: Hayoon Kim (hk819), Conway Zhou (cz345), Yash Puranik, Yebin Kim
 
-Project URL:
-
-Demo Video:
+Demo Video: https://youtu.be/UfajPuyQaQI
 
 Credentials:
 end users
@@ -27,5 +25,3 @@ Hayoon Kim: User login/logout, account creation, landing pages, user schemas, qu
 Conway Zhou: Alert pages, Alert schemas, Video, Design
 Yash Puranik: Bid/Auction schemas, Bid/Auction pages, sales reports
 Yebin Kim: Bid/Auction schemas, Bid/Auction pages
-
-Assumptions:
