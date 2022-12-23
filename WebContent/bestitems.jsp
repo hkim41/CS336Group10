@@ -10,7 +10,7 @@
 <title>Best Selling Items</title>
 </head>
 <body>
-	<button onclick="window.location.href='generateSalesReport.jsp';">Return to Generate Sales Report Page</button>
+	<button onclick="window.location.href='generateSalesReports.jsp';">Return to Generate Sales Report Page</button>
 <h2>View Best Selling Items</h2>
 <p> number of times an item has been sold in auction</p>
 	<%
