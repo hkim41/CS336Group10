@@ -30,7 +30,7 @@ try {
 		} else {
 	out.print("<h3>Your question has been submitted successfully. Please be patient, a representative will respond shortly.</h3>");
 	out.print("<a href='searchQuestions.jsp'>Search for questions</a><br>");
-	out.print("<a href='account.jsp'>Return to homepage</a>");
+	out.print("<a href='enduserlanding.jsp'>Return to landing</a>");
 	return;
 		}
 	} else {
