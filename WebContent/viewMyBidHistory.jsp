@@ -9,7 +9,7 @@
 <title>View Bid History</title>
 </head>
 <body>
-	<button onclick="window.location.href='account.jsp';">Return to account homepage</button>
+	<button onclick="window.location.href='enduserlanding.jsp';">Return to user landing</button>
 <h2>View My Bid History and all the auctions I have participated In</h2>
 	<%
 	ApplicationDB db = new ApplicationDB();
